@@ -389,7 +389,29 @@ nav li a:hover {
   padding: 100px 0 110px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
+  z-index: 1;
 }
+.reviews .wrapper:after {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  top: 450px;
+  right: 220px;
+  margin-top: -90px;
+  margin-right: -90px;
+  background-color: rgba(4,30,36,.5);
+  z-index: -1;
+  -webkit-box-shadow: 0px 0px 150px 250px rgba(4,30,36,.5);
+  -moz-box-shadow: 0px 0px 150px 250px rgba(4,30,36,.5);
+  box-shadow: 0px 0px 150px 250px rgba(4,30,36,.5);
+}
+
+
+
+
+
 .reviews-icon {
   display: block;
   margin: 0 auto 20px;
@@ -402,11 +424,42 @@ nav li a:hover {
   color: #fff;
   margin-bottom: 8px;
 }
-.reviews small {
+.reviews h2 + small {
   font-size: 17.95px;
   opacity: .5;
   color: #fff;
 }
+
+.reviews .wrap {
+  padding-top: 110px;
+}
+.review {
+  width: 50%;
+  padding: 0 8%;
+}
+.review__person__image {
+  width: 194px;
+  height: auto;
+  margin-bottom: 28px;
+}
+.review__person__name {
+  font-size: 24px;
+  font-family: 'helveticaneue';
+  color: #fff;
+  margin-bottom: 4px;
+}
+.review__person__position {
+  font-size: 16px;
+  color: #00a2e5;
+  font-family: 'helveticaneue';
+}
+.review__text {
+  color: #fff;
+  opacity: .5;
+  margin-top: 24px;
+  font: 18px/30px 'helveticaneue';
+}
+
 
 /* --------------------------------------
    Footer
