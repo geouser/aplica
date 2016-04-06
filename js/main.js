@@ -56,11 +56,13 @@ $(function() { // add class on scroll
   });
 
 $('.offerSlider').slick({
-  dots: true
+  dots: true,
+  fade: true
 });
 
 });
 
+// Switched to '.slick-slider' $(".slick-slider").slickNext(); 
 
 
 

@@ -154,7 +154,9 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
   justify-content: space-around;
 }
 
-
+@media (max-width: 1250px) {
+    .wrapper {width: 98%;}
+}
 /* --------------------------------------
    Custom Styles
    -------------------------------------- */
@@ -163,7 +165,6 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
     background-image: url("../images/offer_bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 240px;
 }
 
 header {
@@ -282,8 +283,9 @@ nav li a:hover {
     nav.active                  {   left: 0;}
 }
 
-
-
+.offerSlider {
+    height: 900px;
+}
 .offerSlider_slide h2 {
     color: #FFF;
     font: 36px 'helveticaneuecyrlight';
@@ -320,7 +322,7 @@ nav li a:hover {
     height: 20px;
     background-size: 100% 100%;
     position: absolute;
-    top: 140px;
+    top: 330px;
     z-index: 10;
 }
 .slick-prev {
@@ -331,7 +333,18 @@ nav li a:hover {
     background-image: url("../images/next.png");
     right: 0;
 }
-
+.runSlider {
+    display: inline-block;
+    margin: 70px auto;
+}
+.runSlider img {
+    display: block;
+    margin: 0 auto 20px;
+}
+.runSlider span {
+    font: 24px 'helveticaneuecyrlight';
+    color: #FFF;
+}
 .weDo {
         display: flex;
         -webkit-display: flex;
