@@ -299,7 +299,7 @@ nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color
     nav li a                    {   margin: 0 0 25px 0;}
     nav li a.active             {   color: #ECCC1D;} 
     nav li a:hover              {   border-bottom: 1px solid transparent}
-    header.active nav li a img  {   display: inline-block;}
+    header nav li a img  {   display: inline-block;}
 }
 
 .offerSlider {
