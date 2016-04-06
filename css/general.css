@@ -485,7 +485,7 @@ nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color
   position: relative;
   z-index: 1;
 }
-.reviews .wrapper:after {
+/*.reviews .wrapper:after {
   content: '';
   position: absolute;
   width: 1308px;
@@ -499,7 +499,7 @@ nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-}
+}*/
 
 
 
@@ -551,7 +551,23 @@ nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color
   margin-top: 24px;
   font: 18px/30px 'helveticaneue';
 }
-
+@media (max-width: 1000px) {
+  .review {
+    padding: 0 3%;
+  }
+  .review__text {
+    font: 16px/26px 'helveticaneue';
+  }
+}
+@media (max-width: 800px) {
+  .review {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .reviews .wrapper {
+    padding-bottom: 30px;
+  }
+}
 
 /* --------------------------------------
    Footer
@@ -602,3 +618,15 @@ nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color
   margin: 24px 0;
 }
 
+@media (max-width: 800px) {
+  .footer--main .left,
+  .footer--main .right {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 30px;
+  }
+  .footer--main a {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+}
