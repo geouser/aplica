@@ -192,6 +192,10 @@ header .wrapper {
         -webkit-align-items: center;
         align-items: center;
 }
+.logo {
+    position: relative;
+    z-index: 101;
+}
 nav {
         padding: 15px 0;
 }
@@ -225,6 +229,7 @@ nav li a img {
 nav li a:hover {
     border-bottom: 1px solid #fff;
 }
+
 nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color: transparent; color: #FFF; -webkit-border-radius: 10px;
         border-radius: 10px; display: none; position: absolute; bottom: 10px; left: 0; right: 0; margin: auto; font: 20px 'helveticaneuecyrlight';}
 /* ------- menu toggle --------- */
@@ -259,7 +264,7 @@ nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color
                                      background-image: url('../images/close.png');
                                  }
     nav                          {    
-                                     top: 0;
+                                     top: 0%;
                                      left: -100%;
                                      width: 100% !important;
                                      text-align: center;
@@ -270,15 +275,20 @@ nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color
                                      position: fixed;
                                      height: 100%;
                                      z-index: 100;
+                                     -webkit-transition: all .4s;
+                                        -moz-transition: all .4s;
+                                         -ms-transition: all .4s;
+                                          -o-transition: all .4s;
+                                             transition: all .4s;
                                     }
     nav ul                      {   
                                     display: block;
                                     height: 100%;
                                 }
-    header                     {    position: fixed;}
+    header                     {    position: fixed; min-height: 54px;}
     header.active nav          {    left: 0;}
     header.active .logo        {    position: fixed; z-index: 101; top: 5px; left: 10px;}
-    header.active nav ul       {    border-top: 1px solid #474747;
+    nav ul                     {    border-top: 1px solid #474747;
                                     padding-top: 25px;
                                     text-align: left;
                                     width: 96%;
