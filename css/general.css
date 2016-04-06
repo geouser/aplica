@@ -613,9 +613,12 @@ nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color
   }
 }
 @media (max-width: 800px) {
+  .reviews {
+    background-color: transparent;
+  }
   .review {
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 60px; 
   }
   .reviews .wrapper {
     padding-bottom: 30px;
