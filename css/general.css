@@ -63,7 +63,7 @@ body                          {    margin: 0;
                                    -ms-overflow-x: hidden;
                                        overflow-x: hidden;
                                    max-width: 100%;
-                                   font-family: 'helveticaneue'}
+                                   font-family: 'helveticaneuecyrlight';}
 
 h1, h2, h3, h4, h5, p         {    margin: 0;}
 h1, h2, h3, h4, h5            {    font-weight: normal; font-family: 'helveticaneuecyrlight';}
@@ -80,7 +80,9 @@ ul                            {    padding: 0; margin: 0;}
                                    clear: both;}
 
 a[href^=tel]                  {     color:inherit !important; text-decoration:none;}
-
+hr {
+  margin: 0;
+}
 .wrapper                      {    margin: 0 auto;
                                    text-align: center;
                                    width: 1200px;}
@@ -90,6 +92,12 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                                    height: 100%;
                                    margin-right: 0;
                               }
+h2 {
+  font-size: 36px;
+}
+
+
+
 .pull-left {
   float: left;
 }
@@ -164,3 +172,80 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
 
 
 /*---------------------------------------------------------------*/
+/* --------------------------------------
+   Reviews
+   -------------------------------------- */
+.reviews {
+  background-color: #121212;
+}
+.reviews .wrapper {
+  padding: 100px 0 110px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+.reviews-icon {
+  display: block;
+  margin: 0 auto 20px;
+  width: 103px;
+  height: 103px;
+  background: url(../images/reviews-icon.png) 50% 50% no-repeat;
+  background-size: 100% 100%;
+}
+.reviews h2 {
+  color: #fff;
+  margin-bottom: 8px;
+}
+.reviews small {
+  font-size: 17.95px;
+  opacity: .5;
+  color: #fff;
+}
+
+/* --------------------------------------
+   Footer
+   -------------------------------------- */
+.footer--main {
+  padding: 30px 0;
+  background-color: #F8F7F9;
+  color: #4f4e4e;
+}
+.footer--main .left,
+.footer--main .right {
+  display: inline-block;
+  width: 50%;
+  margin: 0 -2px;
+  vertical-align: middle;
+}
+.footer--main .left {
+  text-align: left;
+}
+.footer--main .right {
+  text-align: right;
+}
+.footer--main p {
+  font-size: 20px;
+}
+.footer--main p.copy {
+  font-size: 15.95px;
+}
+.footer--main a {
+  font-size: 13.5px;
+  height: 33px;
+  line-height: 31px;
+  margin-right: 1px;
+  color: #000;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 13px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  transition: all 0.3s ease
+}
+.buttons a:hover {
+  background-color: #42424C;
+  border-color: #42424C;
+  color: #fff;
+}
+.buttons {
+  margin: 24px 0;
+}
