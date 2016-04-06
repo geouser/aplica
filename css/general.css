@@ -192,6 +192,10 @@ header .wrapper {
         -webkit-align-items: center;
         align-items: center;
 }
+.logo {
+    position: relative;
+    z-index: 101;
+}
 nav {
         padding: 15px 0;
 }
@@ -219,6 +223,10 @@ nav li a {
 nav li a:hover {
     border-bottom: 1px solid #fff;
 }
+
+
+nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color: transparent; color: #FFF; -webkit-border-radius: 10px;
+        border-radius: 10px; display: none; position: absolute; bottom: 10px; left: 0; right: 0; margin: auto; font: 20px 'helveticaneuecyrlight';}
 
 /* ------- menu toggle --------- */
 .menu-button                     {    display: none;}
@@ -271,7 +279,7 @@ nav li a:hover {
                                  }
     .menu-button.hasScrolled     {    top: 10px;}
     nav                          {    
-                                     top: 0;
+                                     top: 0%;
                                      left: -100%;
                                      width: 255px !important;
                                      text-align: center;
@@ -282,6 +290,11 @@ nav li a:hover {
                                      position: fixed;
                                      height: 100%;
                                      z-index: 100;
+                                     -webkit-transition: all .4s;
+                                        -moz-transition: all .4s;
+                                         -ms-transition: all .4s;
+                                          -o-transition: all .4s;
+                                             transition: all .4s;
                                     }
     nav ul                      {   
                                     -webkit-flex-direction: column;
@@ -289,7 +302,25 @@ nav li a:hover {
                                     flex-direction: column;
                                     height: 100%;
                                 }
+
     nav.active                  {   left: 0;}
+
+    header                     {    position: fixed; min-height: 54px;}
+    header.active nav          {    left: 0;}
+    header.active .logo        {    position: fixed; z-index: 101; top: 5px; left: 10px;}
+    nav ul                     {    border-top: 1px solid #474747;
+                                    padding-top: 25px;
+                                    text-align: left;
+                                    width: 96%;
+                                    margin: 60px auto 0;
+                                    padding-bottom: 60px;
+                                }
+    nav .order                  {   display: block;}
+    nav li a                    {   margin: 0 0 25px 0;}
+    nav li a.active             {   color: #ECCC1D;} 
+    nav li a:hover              {   border-bottom: 1px solid transparent}
+    header nav li a img  {   display: inline-block;}
+
 }
 
 .offerSlider {
