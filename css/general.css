@@ -478,18 +478,17 @@ nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color
 .reviews .wrapper:after {
   content: '';
   position: absolute;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  width: 1308px;
+  height: 1596px;
   top: 450px;
-  right: 220px;
-  margin-top: -90px;
-  margin-right: -90px;
-  background-color: rgba(4,30,36,.5);
+  right: 320px;
+  margin-top: -798px;
+  margin-right: -654px;
   z-index: -1;
-  -webkit-box-shadow: 0px 0px 150px 250px rgba(4,30,36,.5);
-  -moz-box-shadow: 0px 0px 150px 250px rgba(4,30,36,.5);
-  box-shadow: 0px 0px 150px 250px rgba(4,30,36,.5);
+  background-image: url(../images/blue_shadow-min.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 
@@ -502,7 +501,6 @@ nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color
   width: 103px;
   height: 103px;
   background: url(../images/reviews-icon.png) 50% 50% no-repeat;
-  background-size: 100% 100%;
 }
 .reviews h2 {
   color: #fff;
