@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
 $('.menu-button').on('click', function(event) {
   event.preventDefault();
   $(this).toggleClass('active');
-  $(this).siblings('nav').toggleClass('active');
+  $(this).parent().parent('header').toggleClass('active');
 });
 
 
