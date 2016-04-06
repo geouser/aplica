@@ -426,7 +426,7 @@ nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color
     .offerSlider_wrap {background-image: url("../images/offer_slider_bg.jpg"); background-position: 50% 50%; -webkit-background-size: cover;
          -o-background-size: cover;
             background-size: cover;} 
-    .slick-arrow {top: 270px}
+    .slick-arrow {top: 300px}
     .offerSlider:after {
     content: '';
     height: 300px;
