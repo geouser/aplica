@@ -13,6 +13,24 @@ window.params = {
 
 jQuery(document).ready(function($) {
 
+$('.menu-button').on('click', function(event) {
+  event.preventDefault();
+  $(this).toggleClass('active');
+  $(this).siblings('nav').toggleClass('active');
+});
+
+
+$(function() { // add class on scroll
+  var $document = $(document),
+      $element = $('.menu-button'),
+      $element2 = $('header'),
+      className = 'hasScrolled';
+
+  $document.scroll(function() {
+    $element.toggleClass(className, $document.scrollTop() >= 20);
+    $element2.toggleClass(className, $document.scrollTop() >= 1);
+  });
+});
 
 /*-----------------------------------------------------------------*/  
   $('.magnific').magnificPopup({
@@ -36,6 +54,10 @@ jQuery(document).ready(function($) {
     e.preventDefault();
     $.magnificPopup.close();
   });
+
+$('.offerSlider').slick({
+  dots: true
+});
 
 });
 
