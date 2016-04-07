@@ -539,7 +539,7 @@ nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color
     background-image: url(../images/blue_shadow-min.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 50% 0%;
   }
 }
 .reviews .wrapper {
