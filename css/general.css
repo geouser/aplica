@@ -182,6 +182,8 @@ h2 {
 }
 @media (min-width: 801px) and (max-width: 1400px) {
     .offer {background-image: url("../images/offer_bg_1400.jpg");}
+}
+@media (min-width: 801px) {
     .offer:after {
     content: '';
     height: 300px;
@@ -343,7 +345,7 @@ nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color
 .offerSlider_slide h2 {
     color: #FFF;
     font: 36px 'helveticaneuecyrlight';
-    width: 480px;
+    width: 500px;
     margin: 0 auto 40px;
 }
 .offerSlider_slide_icons img {

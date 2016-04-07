@@ -57,8 +57,23 @@ $(function() { // add class on scroll
 
 $('.offerSlider').slick({
   dots: true,
-  fade: true
+  fade: true,
+  speed: 600
 });
+
+$('.runSlider').click(function(event){
+    event.preventDefault();
+    $('.offerSlider').slick('slickNext').slick('slickPlay');
+});
+
+$('.offerSlider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+  var slideIn = $(slick.$slides.get(currentSlide)).attr('data-slick-index');
+  console.log(slideIn);
+  if (slideIn == 0) {
+    $('.offerSlider').slick('slickPause');
+  }
+});
+
 
 });
 
