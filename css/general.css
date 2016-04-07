@@ -534,6 +534,14 @@ nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color
 .reviews {
   background-color: #121212;
 }
+@media (min-width: 801px) {
+  .reviews {
+    background-image: url(../images/blue_shadow-min.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+}
 .reviews .wrapper {
   padding: 100px 0 110px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
