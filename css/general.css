@@ -714,9 +714,15 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
 .start-3 { background-position: -5px -336px; width: 163px; height: 163px; }
 
 /*---------------------------------------------------------------*/
+.package {
+  font-size: 18px;
+}
 .package__main {
   padding-left: 200px;
   margin-top: 100px;
+}
+.package__main--margin {
+  margin-bottom: 100px;
 }
 .package__main p {
   margin-bottom: 30px;
@@ -739,10 +745,46 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
   background-position: 50% 50%;
 }
 .package__main p.icon_start:before {
-  background-image: url(../images/icon-start.png);
+  background-image: url(../images/start_1.png);
+}
+.package__main p.icon_top:before {
+  background-image: url(../images/start_2.png);
+}
+.package__main p.icon_aud:before {
+  background-image: url(../images/start_3.png);
+}
+
+.package__features {
+  display: block;
+  text-align: left;
+}
+.package__features li {
+  display: block;
 }
 
 
+.package__result {
+  text-align: left;
+  margin-top: 38px;
+}
+.package__result li {
+  display: block;
+  padding-left: 15px;
+  position: relative;
+}
+.package__result ul + p {
+  margin-top: 50px;
+}
+.package__result li:before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  left: 0px;
+  top: 10px;
+  background-color: #C2C2C2;
+  border-radius: 50%;
+}
 
 
 /* --------------------------------------
