@@ -656,13 +656,13 @@ nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color
 .footer--main .right {
   text-align: right;
 }
-.footer--main p {
+footer p {
   font-size: 20px;
 }
-.footer--main p.copy {
+footer p.copy {
   font-size: 15.95px;
 }
-.footer--main a {
+.buttons a {
   font-size: 13.5px;
   height: 33px;
   line-height: 31px;
@@ -691,7 +691,7 @@ nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color
     text-align: center;
     margin: 0 0 30px;
   }
-  .footer--main a {
+  .buttons a {
     margin-top: 3px;
     margin-bottom: 3px;
   }
