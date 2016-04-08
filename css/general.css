@@ -635,7 +635,7 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
 .infoBlock h2 {
     display: inline-block;
     vertical-align: top;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 }
 .infoBlock p {
     font-size: 18px;
@@ -646,7 +646,7 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
     height: 75px;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 12px;
     background-repeat: no-repeat;
     background: url('../images/icons_2.png') no-repeat; overflow: hidden;
 }
