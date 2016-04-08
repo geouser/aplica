@@ -105,6 +105,14 @@ h2 {
   font-size: 36px;
 }
 
+@media (max-width: 600px) {
+    h2 {font-size: 28px;}
+    p {font-size: 15px;}
+}
+@media (max-width: 400px) {
+   h2 {font-size: 26px;}
+}
+
 .blue   {color: #5F86D5 !important;}
 .brown  {color: #C67559 !important;}
 .velvet {color: #CE447E !important;}
@@ -263,6 +271,17 @@ section.content {
     position: absolute;
     top: -4px;
 }
+@media (max-width: 800px) {
+    .explain {display: none;}
+    .offer .button {display: none;}
+    .offer    {padding-top: 40px; margin-bottom: 100px;}
+    .offer h1 {position: absolute; left: 0; right: 0; top: 100px; margin: auto; color: #292929; font-size: 42px;}
+    .offer h1:before {width: 65px; height: 65px; background: url('../images/promotion_h1_mobile.png') no-repeat; background-position: 0 0; background-size: 100% 100%;}
+}
+@media (max-width: 500px) {
+    .offer h1 {font-size: 34px;}
+    .offer h1:before {width: 50px; height: 50px; }
+}
 header {
         margin: 0;
         position: absolute;
@@ -321,7 +340,8 @@ nav li a:hover {
 }
 
 .button {
-    height: 42px; padding: 0 17px; border: 1px solid #fff; background-color: transparent; color: #FFF; -webkit-border-radius: 10px;
+    height: 42px; padding: 0 17px; border: 1px solid #fff; 
+    background-color: transparent; color: #FFF; -webkit-border-radius: 10px;
         border-radius: 6px; font: 18px 'helveticaneuecyrlight';
         -webkit-transition: all .2s;
             -ms-transition: all .2s;
@@ -353,7 +373,7 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
 @media (max-width: 800px) {
     #indexPage                  {   background-color: #121212; background-image: url("../images/index_bg_mobile.jpg"); background-position: 50% 0%; background-size: 100% auto; background-repeat: repeat;}
     .menu-button                {    position: fixed;
-                                     top: 8px;
+                                     top: 16px;
                                      right: 15px;
                                      margin: auto; 
                                      cursor: pointer;
@@ -400,6 +420,14 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
     nav li a.active             {   color: #ECCC1D;} 
     nav li a:hover              {   border-bottom: 1px solid transparent}
     header nav li a img  {   display: inline-block;}
+
+    #indexPage header {
+        background-color: #121212;
+    }
+    header {
+        padding: 15px 0;
+    }
+    nav .button  {display: block;}
 }
 
 @media (max-width: 750px) {
@@ -414,6 +442,9 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
 @media (max-width: 400px) {
 #indexPage                  {   background-position: 50% -20%;}
 }
+
+
+/*--- offerSlider --- */
 
 .offerSlider {
     height: 900px;
@@ -536,8 +567,9 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
 
 
 
+/*--- we Do --- */
 .weDo,
-.ourOffers {
+.ourOffers_slider  {
         display: flex;
         -webkit-display: flex;
         -webkit-justify-content: space-between;
@@ -580,10 +612,6 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
 
 
 @media (max-width: 800px) {
-    header {
-        background-color: #121212;
-        padding: 5px 0;
-    }
     .weDo {
           -webkit-flex-direction: column;
           -ms-flex-direction: column;
@@ -605,7 +633,10 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
 }
 
 
+.content .wrapper > hr:first-of-type {display: none;}
 
+
+/*--- steps --- */
 .steps {
         display: flex;
         -webkit-display: flex;
@@ -627,6 +658,8 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
     font: 16px/24px 'helveticaneuecyrlight';
 }
 
+
+/*--- infoblocks --- */
 .infoBlock {
     text-align: left;
     padding-left: 90px;
@@ -655,15 +688,44 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
 .infoBlock__icon.third   { background-position: -84px -583px; width: 74px; height: 74px;  }
 .infoBlock__icon.fourth  { background-position: -5px -583px; width: 74px; height: 74px; }
 
+@media (max-width: 800px) {
+   .infoBlock p,
+   .infoBlock h2 {max-width: 80%;}
+   .infoBlock h2  {line-height: normal;}
+   hr {margin: 30px 0 35px;}
+   .content .wrapper > hr:first-of-type {display: block; margin-top: 0;}
+   section.content {padding: 20px 0 100px;}
 
+   .steps_item {text-align: center; padding: 0 60px;}
+   .steps_item p {text-align: center;}
+}
+
+@media (max-width: 600px) {
+   .steps_item {text-align: center; padding: 0 30px;}
+   .infoBlock p {font-size: 16px; max-width: 95%;}
+   .infoBlock__icon {top: 5px;}
+   .infoBlock  {padding-left: 80px;}
+}
+@media (max-width: 400px) {
+   .steps_item {text-align: center; padding: 0 10px;}
+   .infoBlock p {font-size: 16px; max-width: 99%;}
+   .steps p {font: 15px/22px 'helveticaneuecyrlight';}
+}
+
+
+/*--- our offers 11 --- */
 .ourOffers {
     margin: 70px 0 90px; 
-    -webkit-justify-content: start;
-    justify-content: start;
-    
 }
+.ourOffers_slider {
+       -webkit-justify-content: start;
+    justify-content: start;
+    margin-bottom: 55px; 
+}
+.ourOffers_slider .slick-list,
+.ourOffers_slider .slick-track {width: 100% ;}
 .ourOffers_item {
-    width: 25%;
+    width: 25% ;
     text-align: left;
     margin-bottom: 30px;
     height: 75px;
@@ -680,7 +742,6 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
     vertical-align: middle;
     width: calc(100% - 100px);
 }
-.ourOffers_item:last-of-type {margin-bottom: 65px;}
 .ourOffers_item i {
     display: inline-block;
     vertical-align: middle;
@@ -703,15 +764,23 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
 .ourOffers_item:nth-of-type(10) i {background-position: -4px -257px; width: 32px; height: 31px;}
 .ourOffers_item:nth-of-type(11) i {background-position: -4px -80px; width: 35px; height: 35px;}
 
+@media (max-width: 1250px) {
+    .ourOffers_item {width: 33%;}
+}
+@media (max-width: 900px) {
+    .ourOffers_item {width: 50% ;}
+}
+@media (max-width: 801px) {
+    .ourOffers_item {width: 100;}
+    .ourOffers_slider {
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column
+    }
+}
 
 
 
-.start-1, .start-2, .start-3
-{ display: inline-block; background: url('../images/icons_2.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
- 
-.start-1 { background-position: -5px -0px; width: 163px; height: 163px; }
-.start-2 { background-position: -5px -168px; width: 163px; height: 163px; }
-.start-3 { background-position: -5px -336px; width: 163px; height: 163px; }
 
 /*---------------------------------------------------------------*/
 .package {

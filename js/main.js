@@ -75,6 +75,21 @@ $('.offerSlider').on('afterChange', function(event, slick, currentSlide, nextSli
 });
 
 
+
+$('.steps').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 801,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+});
+
 });
 
 // Switched to '.slick-slider' $(".slick-slider").slickNext(); 
