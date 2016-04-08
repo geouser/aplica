@@ -68,6 +68,7 @@ body                          {    margin: 0;
                                 }
 
 h1, h2, h3, h4, h5, p         {    margin: 0;}
+p                             {     text-align: left;}
 h1, h2, h3, h4, h5            {    font-weight: normal; font-family: 'helveticaneuecyrlight';}
 a                             {    text-decoration: none;}
 strong                        {    font-weight: normal; font-family: 'helveticaneuecyrmedium';}
@@ -241,7 +242,7 @@ section.content {
     font: 18px/24px 'helveticaneuecyrlight';
     width: 50%;
     position: relative;
-    padding-left: 15px;
+    padding-left: 30px;
 }
 .explain:before {
     content: url('../images/brackets.png');
@@ -518,14 +519,20 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
 
 
 
-.weDo {
+.weDo,
+.ourOffers {
         display: flex;
         -webkit-display: flex;
         -webkit-justify-content: space-between;
         justify-content: space-between;
         -webkit-align-items: start;
         align-items: start;
-        padding-top: 115px;
+            -webkit-flex-wrap: wrap;
+       -ms-flex-wrap: wrap;
+       flex-wrap: wrap;
+}
+.weDo {
+            padding-top: 115px;
         padding-bottom: 90px;
 }
 .weDo_item  {
@@ -589,8 +596,7 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
         justify-content: space-between;
         -webkit-align-items: start;
         align-items: start;
-        padding-top: 115px;
-        padding-bottom: 90px;
+        margin: 70px 0 80px;
         text-align: left;
 }
 .steps_item {
@@ -625,6 +631,28 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
     left: 0;
     top: 0;
     background-repeat: no-repeat;
+}
+
+.ourOffers {
+    margin: 70px 0 90px;    
+}
+.ourOffers_item {
+    width: 25%;
+    text-align: left;
+    margin-bottom: 30px;
+}
+.ourOffers_item p {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 95px);
+}
+.ourOffers_item:last-of-type {margin-bottom: 55px;}
+.ourOffers_item i {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    margin: 0 40px 0 20px;
 }
 /*---------------------------------------------------------------*/
 /* --------------------------------------
