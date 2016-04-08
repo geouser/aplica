@@ -855,6 +855,54 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
   border-radius: 50%;
 }
 
+@media (max-width: 800px) {
+  .package {
+    text-align: center;
+    font-size: 16px;
+  }
+  .package br {
+    display: none;
+  }
+  .package__main {
+    padding-left: 0;
+  }
+  .package__main p {
+    text-align: center;
+  }
+  .package__main p.has_icon::before {
+    position: static;
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .package__main {
+    margin-top: 50px;
+  }
+  .package__main--margin {
+    margin-bottom: 50px;
+  }
+
+  .package__features ul {
+    text-align: center;
+  }
+  .package__result {
+    text-align: center;
+  }
+  .package__result ul {
+    margin-top: 15px;
+  }
+  .package__result li {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  .package__result ul + p {
+    text-align: center;
+  }
+}
+
+
+
+
 
 /* --------------------------------------
    Reviews
