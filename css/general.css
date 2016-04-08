@@ -92,11 +92,19 @@ hr {
                                    height: 100%;
                                    margin-right: 0;
                               }
+h1 {
+    font: 24px 'helveticaneuecyrlight';
+    color: #FFF;
+}
 h2 {
   font-size: 36px;
 }
 
-
+.blue   {color: #5F86D5 !important;}
+.brown  {color: #C67559 !important;}
+.velvet {color: #CE447E !important;}
+.green  {color: #238D57 !important;}
+.orange {color: #C26F00 !important;}
 
 .pull-left {
   float: left;
@@ -168,6 +176,7 @@ h2 {
 /* --------------------------------------
    Custom Styles
    -------------------------------------- */
+#promotionPage p {color: #292929;}
 
 .offer {
     background-size: cover;
@@ -175,16 +184,21 @@ h2 {
     background-position: 50% 50%;
     position: relative;
     z-index: 1;
+    padding-top: 140px;
     }
+#indexPage .offer {padding-top: 0;}
+#promotionPage .offer {
+  background-image: url("../images/offer_promotion.jpg");
+}
 
 @media (min-width: 1400px) {
-    .offer {background-image: url("../images/offer_bg.jpg");}
+    #indexPage .offer {background-image: url("../images/offer_bg.jpg");}
 }
 @media (min-width: 801px) and (max-width: 1400px) {
-    .offer {background-image: url("../images/offer_bg_1400.jpg");}
+    #indexPage .offer {background-image: url("../images/offer_bg_1400.jpg");}
 }
 @media (min-width: 801px) {
-    .offer:after {
+    #indexPage .offer:after {
     content: '';
     height: 300px;
     width: 100%;
@@ -253,8 +267,11 @@ nav li a:hover {
     border-bottom: 1px solid #fff;
 }
 
-nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color: transparent; color: #FFF; -webkit-border-radius: 10px;
-        border-radius: 10px; display: none; position: absolute; bottom: 10px; left: 0; right: 0; margin: auto; font: 20px 'helveticaneuecyrlight';}
+.button {
+    height: 42px; padding: 0 17px; border: 1px solid #fff; background-color: transparent; color: #FFF; -webkit-border-radius: 10px;
+        border-radius: 6px; font: 18px 'helveticaneuecyrlight';
+}
+nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0; margin: auto;}
 /* ------- menu toggle --------- */
 .menu-button                     {    display: none;}
 .menu-button                     {
@@ -461,7 +478,8 @@ nav .order {height: 50px; width: 250px; border: 1px solid #fff; background-color
 
 
 
-.weDo {
+.weDo,
+.steps {
         display: flex;
         -webkit-display: flex;
         -webkit-justify-content: space-between;
