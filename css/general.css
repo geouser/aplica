@@ -725,6 +725,9 @@ footer p.copy {
   z-index: -1;
   opacity: 0.94;
 }
+
+
+
 .footer--pink {
   background-image: url(../images/footer--pink.jpg);
   background-repeat: no-repeat;
@@ -734,6 +737,10 @@ footer p.copy {
 .footer--pink:after {
   background-color: #b44989;
 }
+
+
+
+
 
 .footer--secondary .buttons a {
   border-color: #fff;
