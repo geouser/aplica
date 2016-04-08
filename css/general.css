@@ -729,6 +729,7 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
   font-family: 'helveticaneue';
   color: #fff;
   margin-bottom: 4px;
+  text-align: center;
 }
 .review__person__position {
   font-size: 16px;
@@ -954,22 +955,67 @@ footer p.copy {
     background-color: transparent;
     color: #fff;
     text-align: left;
-    padding-top: 30px;
+    padding-top: 0;
+
   }
   .footer--main .wrapper {
     border-top: 1px solid #373737;
+    padding-top: 40px;
+    text-align: left;
   }
-  .footer--main .left,
+  .footer--main .left {
+    width: 50%;
+    text-align: center;
+    margin: 0 -2px 30px;
+  }
+  
   .footer--main .right {
     width: 100%;
-    text-align: center;
-    margin: 0 0 30px;
+  }
+  .copy {
+    margin-top: 25px;
+    opacity: 0.7;
   }
   .footer_nav {
     display: none;
   }
   .buttons {
     display: none;
+  }
+  .order_app {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    width: auto;
+  }
+  .footer--main .order_app {
+    top: 40px;
+  }
+  .order_app .order {
+    font-size: 12px;
+    height: 35px;
+    line-height: 33px;
+    padding: 0 10px;
+  }
+  .order_app .fb {
+    display: none;
+  }
+  .footer--secondary p {
+    width: 50%;
+    font-size: 12px;
+  }
+  footer p {
+    font-size: 12px;
+  }
+  footer p.copy {
+    font-size: 10px;
+  }
+  footer .wrapper {
+    padding: 0;
+  }
+  .footer--secondary {
+    padding: 25px 0;
   }
 }
 
