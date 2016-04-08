@@ -882,6 +882,9 @@ footer p.copy {
   color: #fff;
   padding: 80px 0 20px;
 }
+.footer--secondary p {
+  text-align: center;
+}
 .footer--secondary:after {
   content: '';
   width: 100%;
@@ -916,8 +919,7 @@ footer p.copy {
   color: #fff;
 }
 .footer--secondary .buttons a:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: rgba(255, 255, 255, .2);
 }
 
 
@@ -959,8 +961,7 @@ footer p.copy {
   font-size: 18px;
 }
 .order_app .order:hover {
-  color: #000;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .order_app .fb {
   width: 36px;
@@ -978,8 +979,22 @@ footer p.copy {
 .order_app .fb:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
-
-
+.footer--main .order_app {
+  display: none;
+}
+.fb-page {
+  width: 280px!important;height: 220px!important;
+  display: inline-block;
+}
+.fb_iframe_widget span {
+  display: block!important;
+  width: 100%!important;
+  height: 100%!important;
+}
+.fb_iframe_widget iframe {
+  width: 100%!important;
+  height: 100%!important;
+}
 
 @media (max-width: 1250px) {
   footer {
@@ -1030,6 +1045,7 @@ footer p.copy {
   
   .footer--main .right {
     width: 100%;
+    text-align: center;
   }
   .copy {
     margin-top: 25px;
@@ -1050,6 +1066,7 @@ footer p.copy {
   }
   .footer--main .order_app {
     top: 40px;
+    display: block;
   }
   .order_app .order {
     font-size: 12px;
@@ -1063,6 +1080,7 @@ footer p.copy {
   .footer--secondary p {
     width: 50%;
     font-size: 12px;
+    text-align: left;
   }
   footer p {
     font-size: 12px;
