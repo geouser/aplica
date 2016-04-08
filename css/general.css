@@ -734,6 +734,12 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
   top: 50%;
   left: -200px;
   margin-top: -80px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.package__main p.icon_start:before {
+  background-image: url(../images/icon-start.png);
 }
 
 
