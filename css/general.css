@@ -857,6 +857,53 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
 }
 
 
+.persons__person {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+    display: inline-block;
+    margin-right: -3px;
+    text-align: left;
+    padding-right: 45px;
+}
+.persons__person:nth-child(2n) {
+    padding-right: 0;
+    padding-left: 45px;
+}
+.persons__person:nth-child(2n),
+.persons__person:nth-child(2n) p  {
+    text-align: right;
+}
+.persons__person__img {
+    width: 195px;
+    margin-bottom: 20px;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+}
+.persons__person h2 {
+    margin-bottom: 10px;
+}
+.persons__person__occupation {
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: block;
+}
+.persons__person p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.persons__person a {
+    font: 18px 'helveticaneue';
+    color: #498CE3;
+}
+@media (max-width: 1000px) {
+    .persons__person {width: 95%; padding: 0 !important; margin-bottom: 30px; text-align: center;}
+    .persons__person p,
+    .persons__person h2 {text-align: center !important;}
+    .persons__person:nth-child(2n),
+    .persons__person:nth-child(2n) p  {text-align: center;}
+}
+
 /*---------------------------------------------------------------*/
 .package {
   font-size: 18px;
