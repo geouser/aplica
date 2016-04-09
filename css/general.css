@@ -196,14 +196,13 @@ h2 {
 @media (max-width: 1250px) {
     .wrapper {width: 100%; padding: 0 10px;}
 }
+
+
 /* --------------------------------------
    Custom Styles
    -------------------------------------- */
-#indexPage  {color: #FFF;}
-section.content {
-    padding: 70px 0 240px;
-}
-
+#indexPage      {color: #FFF;}
+section.content {padding: 70px 0 240px;}
 
 .offer {
     background-size: cover;
@@ -214,15 +213,50 @@ section.content {
     padding-top: 140px;
     padding-bottom: 30px;
     }
+
 #indexPage .offer       {padding-top: 0; padding-bottom: 0;}
+
+
+/* ------- media for index page bg --------- */
 @media (min-width: 1400px) {
-    #indexPage .offer {background-image: url("../images/offer_bg.jpg");}
+#indexPage .offer           {   background-image: url("../images/offer_bg.jpg");}
 }
 @media (min-width: 801px) and (max-width: 1400px) {
-    #indexPage .offer     {background-image: url("../images/offer_bg_1400.jpg");}
+#indexPage .offer           {   background-image: url("../images/offer_bg_1400.jpg");}
+}
+@media (max-width: 800px) {
+#indexPage                  {   background-color: #121212; background-image: url("../images/index_bg_mobile.jpg"); 
+                                background-position: 50% 0%; background-size: 100% auto; background-repeat: repeat;}
+#indexPage .offer:after {
+                                content: '';
+                                height: 300px;
+                                width: 100%;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                position: absolute;
+                                background: -moz-linear-gradient(top, rgba(18,18,18,0) 0%,rgba(18,18,18,1) 100%);
+                                background: -webkit-linear-gradient(top, rgba(18,18,18,0) 0%,rgba(18,18,18,1) 100%);
+                                background: linear-gradient(to bottom, rgba(18,18,18,0) 0%,rgba(18,18,18,1) 100%);
+                                z-index: -1;
+                                }
+}
+@media (max-width: 750px) {
+#indexPage                  {   background-position: 50% -5%;}
+}
+@media (max-width: 600px) {
+#indexPage                  {   background-position: 50% -10%;}
+}
+@media (max-width: 450px) {
+#indexPage                  {   background-position: 50% -15%;}
+}
+@media (max-width: 400px) {
+#indexPage                  {   background-position: 50% -20%;}
 }
 
 
+
+/* ------- other's page offer bg --------- */
 #promotionPage .offer {
   background-image: url("../images/offer_promotion.jpg");
 }
@@ -230,26 +264,16 @@ section.content {
   background-image: url("../images/offer_about.jpg");
 }
 
+/* ------- set bg from offer to header --------- */
 @media (max-width: 801px) {
     #promotionPage .offer {background: none;}
     #promotionPage header {background-image: url("../images/offer_promotion.jpg");}
 
     #aboutPage .offer {background: none;}
     #aboutPage header {background-image: url("../images/offer_about.jpg");}
-    #indexPage .offer:after {
-    content: '';
-    height: 300px;
-    width: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    background: -moz-linear-gradient(top, rgba(18,18,18,0) 0%,rgba(18,18,18,1) 100%);
-    background: -webkit-linear-gradient(top, rgba(18,18,18,0) 0%,rgba(18,18,18,1) 100%);
-    background: linear-gradient(to bottom, rgba(18,18,18,0) 0%,rgba(18,18,18,1) 100%);
-    z-index: -1;
-    }
 }
+
+
 
 .offer h1 {
     display: inline-block;
@@ -301,6 +325,9 @@ section.content {
 @media (max-width: 400px) {
     .offer h1 {font-size: 30px;}
 }
+
+
+
 header {
         margin: 0;
         position: absolute;
@@ -372,7 +399,9 @@ nav li a:hover {
 .button:hover {
     background-color: rgba(255,255,255, .2);
 }
-nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0; margin: auto;}
+nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; margin: auto;}
+
+
 
 
 /* ------- menu toggle --------- */
@@ -392,11 +421,10 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
                                              background-size: 100% 100%;
                                  }
 
-#indexPage .menu-button    {background: url('../images/open_1.png');}
+#indexPage .menu-button    {background-image: url('../images/open.png');}
 
+/* ------- media for nav and header --------- */
 @media (max-width: 800px) {
-    #indexPage                  {   background-color: #121212; background-image: url("../images/index_bg_mobile.jpg"); 
-                                    background-position: 50% 0%; background-size: 100% auto; background-repeat: repeat;}
     .menu-button                {    position: fixed;
                                      top: 16px;
                                      right: 15px;
@@ -406,7 +434,7 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
                                      display: block;
                                  }
     .menu-button.active          {
-                                     background-image: url('../images/close.png');
+                                     background-image: url('../images/close.png') !important;
                                  }
     nav                          {    
                                      top: 0%;
@@ -420,6 +448,7 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
                                      position: fixed;
                                      height: 100%;
                                      z-index: 100;
+                                     overflow: scroll;
                                      -webkit-transition: all .4s;
                                         -moz-transition: all .4s;
                                          -ms-transition: all .4s;
@@ -443,7 +472,7 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
     nav .order                  {   display: block;}
     nav li a                    {   margin: 0 0 25px 0;}
     nav li a.active             {   color: #ECCC1D;} 
-    nav li a:hover              {   border-bottom: 1px solid transparent}
+    nav li a:hover              {   background: transparent;}
     header nav li a img  {   display: inline-block;}
 
     #indexPage header {
@@ -455,18 +484,6 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
     nav .button  {display: block;}
 }
 
-@media (max-width: 750px) {
-#indexPage                  {   background-position: 50% -5%;}
-}
-@media (max-width: 600px) {
-#indexPage                  {   background-position: 50% -10%;}
-}
-@media (max-width: 450px) {
-#indexPage                  {   background-position: 50% -15%;}
-}
-@media (max-width: 400px) {
-#indexPage                  {   background-position: 50% -20%;}
-}
 
 
 /*--- offerSlider --- */
@@ -611,7 +628,8 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
 }
 .weDo_item  {
     text-align: center;
-    width: 100%;
+    width: 33%;
+    color: #FFF;
     display: block;
 }
 .weDo_item img {
@@ -620,10 +638,13 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
 .weDo_item h3 {
     font: 24px 'helveticaneuecyrlight';
     margin-bottom: 5px;
+    color: #FFF;
 }
 .weDo_item p {
     color: #8B8B8A;
     font-size: 16px;
+    color: #FFF;
+    text-align: center;
 }
 .weDo_item_name {
     display: inline-block;
@@ -644,6 +665,7 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
         }
     .weDo_item {
         margin-bottom: 85px;
+        width: 100%;
     }
 }
 @media (max-width: 600px) {
@@ -661,7 +683,7 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
 .content .wrapper > hr:first-of-type {display: none;}
 
 
-/*--- steps --- */
+/*--- steps (promotion page) --- */
 .steps {
         display: flex;
         -webkit-display: flex;
@@ -741,7 +763,7 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
 }
 
 
-/*--- our offers 11 --- */
+/*--- our offers 11 (promotion page) --- */
 .ourOffers {
     margin: 70px 0 90px; 
 }
@@ -903,6 +925,12 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
     .persons__person:nth-child(2n),
     .persons__person:nth-child(2n) p  {text-align: center;}
 }
+@media (max-width: 600px) {
+    .persons__person p,
+    .persons__person__occupation,
+    .persons__person a {font-size: 16px;}
+}
+
 
 .about-device-desk,
 .about-device-ipad,

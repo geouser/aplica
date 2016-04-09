@@ -17,6 +17,11 @@ $('.menu-button').on('click', function(event) {
   event.preventDefault();
   $(this).toggleClass('active');
   $(this).parent().parent('header').toggleClass('active');
+  if ($('header').hasClass('active')) {
+    $('body').css('overflow', 'hidden');
+  } else {
+    $('body').css('overflow', 'visible');
+  }
 });
 
 
