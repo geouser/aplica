@@ -263,6 +263,9 @@ section.content {padding: 70px 0 240px;}
 #aboutPage .offer {
   background-image: url("../images/offer_about.jpg");
 }
+#portfolioPage .offer {
+  background-image: url("../images/offer_portfolio.jpg");
+}
 
 /* ------- set bg from offer to header --------- */
 @media (max-width: 801px) {
@@ -289,6 +292,33 @@ section.content {padding: 70px 0 240px;}
     background-position: -5px -662px; width: 73px; height: 73px;
     margin-right: 17px;
 }
+.offer.centered h1,
+.offer.centered  h1:before, 
+.offer.centered p {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+.offer.centered  h1:before  {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 10px;
+}
+.offer.centered .button {
+  display: block; 
+  margin: 0 auto;
+}
+.offer.centered p {
+  margin-bottom: 20px;
+  color: rgba(255,255,255, .5);
+}
+.offer.centered h1 {
+  margin-bottom: 10px;
+}
+
+#aboutPage .offer h1:before {background: url('../images/circle_about_1.png') no-repeat;}
+
 .explain {
     display: inline-block;
     vertical-align: middle;
@@ -400,7 +430,7 @@ nav li a:hover {
     background-color: rgba(255,255,255, .2);
 }
 nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; margin: auto;}
-
+.green-border {border: 1px solid #61CAFF;}
 
 
 
@@ -734,6 +764,10 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
 .infoBlock__icon.second  { background-position: -84px -504px; width: 74px; height: 74px; }
 .infoBlock__icon.third   { background-position: -84px -583px; width: 74px; height: 74px;  }
 .infoBlock__icon.fourth  { background-position: -5px -583px; width: 74px; height: 74px; }
+
+
+#aboutPage .infoBlock__icon.first {background-image: url("../images/circle_about_2.png"); background-position: 0 0;}
+#aboutPage .infoBlock__icon.second {background-image: url("../images/circle_about_3.png"); background-position: 0 0;}
 
 @media (max-width: 800px) {
    .infoBlock p,
