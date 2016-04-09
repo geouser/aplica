@@ -1216,6 +1216,9 @@ footer p.copy {
 .footer--pink:after {
   background-color: #b44989;
 }
+.footer--blue:after {
+  background-color: #00a0dc;
+}
 
 
 
