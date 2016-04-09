@@ -434,7 +434,7 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
                                      display: block;
                                  }
     .menu-button.active          {
-                                     background-image: url('../images/close.png');
+                                     background-image: url('../images/close.png') !important;
                                  }
     nav                          {    
                                      top: 0%;
