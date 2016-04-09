@@ -215,17 +215,27 @@ section.content {
     padding-bottom: 30px;
     }
 #indexPage .offer       {padding-top: 0; padding-bottom: 0;}
-#promotionPage .offer {
-  background-image: url("../images/offer_promotion.jpg");
-}
-
 @media (min-width: 1400px) {
     #indexPage .offer {background-image: url("../images/offer_bg.jpg");}
 }
 @media (min-width: 801px) and (max-width: 1400px) {
-    #indexPage .offer {background-image: url("../images/offer_bg_1400.jpg");}
+    #indexPage .offer     {background-image: url("../images/offer_bg_1400.jpg");}
 }
-@media (min-width: 801px) {
+
+
+#promotionPage .offer {
+  background-image: url("../images/offer_promotion.jpg");
+}
+#aboutPage .offer {
+  background-image: url("../images/offer_about.jpg");
+}
+
+@media (max-width: 801px) {
+    #promotionPage .offer {background: none;}
+    #promotionPage header {background-image: url("../images/offer_promotion.jpg");}
+
+    #aboutPage .offer {background: none;}
+    #aboutPage header {background-image: url("../images/offer_about.jpg");}
     #indexPage .offer:after {
     content: '';
     height: 300px;
@@ -240,6 +250,7 @@ section.content {
     z-index: -1;
     }
 }
+
 .offer h1 {
     display: inline-block;
     vertical-align: middle;
@@ -279,8 +290,6 @@ section.content {
     .offer    {padding-top: 40px; margin-bottom: 100px;}
     .offer h1 {position: absolute; left: 0; right: 0; top: 100px; margin: auto; color: #292929; font-size: 42px;}
     */
-    #promotionPage .offer {background: none;}
-    #promotionPage header {background-image: url("../images/offer_promotion.jpg");}
     .offer {padding-top: 100px;}
     .offer h1 {color: #292929; font-size: 42px; text-align: center; width: 100%;}
     .offer h1:before {width: 65px; height: 65px; background: url('../images/promotion_h1_mobile.png') no-repeat; background-position: 0 0; background-size: 100% 100%;}
