@@ -904,6 +904,23 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
     .persons__person:nth-child(2n) p  {text-align: center;}
 }
 
+{ display: inline-block; background: url('../images/icons_about.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+ 
+.device-ipad { background-position: -5px -0px; width: 132px; height: 146px; }
+.device-desk { background-position: -5px -151px; width: 131px; height: 146px; }
+.device-html5 { background-position: -5px -302px; width: 118px; height: 146px; }
+.device-samsung { background-position: -5px -453px; width: 99px; height: 146px; }
+.device-phone { background-position: -5px -604px; width: 98px; height: 146px; }
+.device-windows { background-position: -5px -755px; width: 94px; height: 146px; }
+.circle-about-2 { background-position: -5px -906px; width: 74px; height: 74px; }
+.circle-about-3 { background-position: -5px -985px; width: 74px; height: 74px; }
+.circle-about-1 { background-position: -5px -1064px; width: 73px; height: 73px; }
+.i-desk { background-position: -84px -906px; width: 40px; height: 35px; }
+.i-android { background-position: -84px -946px; width: 30px; height: 34px; }
+.i-html5 { background-position: -84px -985px; width: 29px; height: 33px; }
+.i-apple { background-position: -104px -755px; width: 28px; height: 34px; }
+.i-windows { background-position: -104px -794px; width: 25px; height: 33px; }
+
 /*---------------------------------------------------------------*/
 .package {
   font-size: 18px;
