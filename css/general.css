@@ -904,24 +904,149 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
     .persons__person:nth-child(2n) p  {text-align: center;}
 }
 
-{ display: inline-block; background: url('../images/icons_about.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
- 
-.device-ipad { background-position: -5px -0px; width: 132px; height: 146px; }
-.device-desk { background-position: -5px -151px; width: 131px; height: 146px; }
-.device-html5 { background-position: -5px -302px; width: 118px; height: 146px; }
-.device-samsung { background-position: -5px -453px; width: 99px; height: 146px; }
-.device-phone { background-position: -5px -604px; width: 98px; height: 146px; }
-.device-windows { background-position: -5px -755px; width: 94px; height: 146px; }
-.circle-about-2 { background-position: -5px -906px; width: 74px; height: 74px; }
-.circle-about-3 { background-position: -5px -985px; width: 74px; height: 74px; }
-.circle-about-1 { background-position: -5px -1064px; width: 73px; height: 73px; }
-.i-desk { background-position: -84px -906px; width: 40px; height: 35px; }
-.i-android { background-position: -84px -946px; width: 30px; height: 34px; }
-.i-html5 { background-position: -84px -985px; width: 29px; height: 33px; }
-.i-apple { background-position: -104px -755px; width: 28px; height: 34px; }
-.i-windows { background-position: -104px -794px; width: 25px; height: 33px; }
+.about-device-desk,
+.about-device-ipad,
+.about-device-html5,
+.about-count-circle,
+.about-device-samsung, 
+.about-device-windows,
+.about-device-phone,
+.about-i-desk,
+.about-i-android,
+.about-i-html5, 
+.about-i-apple,
+.about-i-windows,
+.about-circle-about-3 {
+  display: inline-block;
+  background: url('../images/iсons_about.png') no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-align: left;
+}
+.about-device-desk { background-position: -3px -0px; width: 121px; height: 100px; }
+.about-device-ipad { background-position: -3px -103px; width: 91px; height: 134px; }
+.about-device-html5 { background-position: -3px -240px; width: 90px; height: 103px; }
+.about-circle-about-3 { background-position: -3px -346px; width: 74px; height: 74px; }
+.about-count-circle { background-position: -3px -423px; width: 74px; height: 74px; }
+.about-device-samsung { background-position: -3px -500px; width: 59px; height: 116px; }
+.about-device-windows { background-position: -3px -619px; width: 57px; height: 106px; }
+.about-device-phone { background-position: -65px -500px; width: 56px; height: 116px; }
+.about-i-desk { background-position: -80px -346px; width: 40px; height: 35px; }
+.about-i-android { background-position: -80px -384px; width: 30px; height: 34px; }
+.about-i-html5 { background-position: -80px -421px; width: 29px; height: 33px; }
+.about-i-apple { background-position: -80px -457px; width: 28px; height: 34px; }
+.about-i-windows { background-position: -96px -240px; width: 25px; height: 33px; }
+
+
 
 /*---------------------------------------------------------------*/
+
+/*Realized projects*/
+.realized {
+  padding-top: 50px;
+  padding-left: 90px;
+  text-align: left;
+}
+.realized__profect {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+.realized__profect:first-child {
+  margin-left: -45px;
+}
+.realized__profect__icon {
+  height: 145px;
+  position: relative;
+  padding: 0 45px;
+}
+.realized__profect__icon i {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.realized__profect__icon:before {
+  content: '';
+  height: 100%;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: -4px;
+}
+.realized__profect__icon:after {
+  content: attr(data-counter);
+  background: url('../images/iсons_about.png') no-repeat;
+  background-position: -3px -423px;
+  width: 74px;
+  height: 74px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  line-height: 74px;
+  font-size: 18px;
+  color: #f69670;
+  font-family: 'helveticaneuecyrmedium';
+}
+.realized__profect__title,
+.realized__profect__brand {
+  height: 50px;
+  border-right: 1px solid #dbdbdb;
+}
+.realized__profect:last-child .realized__profect__title,
+.realized__profect:last-child .realized__profect__brand {
+  border-right: 0;
+}
+
+.realized__profect__title:before,
+.realized__profect__brand:before {
+  content: '';
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -4px;
+}
+.realized__profect__brand:before {
+  vertical-align: bottom;
+}
+.realized__profect__brand i {
+  vertical-align: bottom;
+}
+
+@media (max-width: 1200px) {
+  .realized {
+    text-align: center;
+    padding-left: 0;
+  }
+  .realized__profect:first-child {
+    margin-left: 0;
+  }
+  .realized__profect {
+    margin-bottom: 50px;
+  }
+  .realized__profect__title,
+  .realized__profect__brand,
+  .realized__profect:last-child .realized__profect__title,
+  .realized__profect:last-child .realized__profect__brand {
+    border: 0;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .realized__profect__icon {
+    padding: 0 25px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .package {
   font-size: 18px;
 }
