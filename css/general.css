@@ -271,16 +271,26 @@ section.content {
     position: absolute;
     top: -4px;
 }
+
 @media (max-width: 800px) {
     .explain {display: none;}
     .offer .button {display: none;}
+    /*
     .offer    {padding-top: 40px; margin-bottom: 100px;}
     .offer h1 {position: absolute; left: 0; right: 0; top: 100px; margin: auto; color: #292929; font-size: 42px;}
+    */
+    #promotionPage .offer {background: none;}
+    #promotionPage header {background-image: url("../images/offer_promotion.jpg");}
+    .offer {padding-top: 100px;}
+    .offer h1 {color: #292929; font-size: 42px; text-align: center; width: 100%;}
     .offer h1:before {width: 65px; height: 65px; background: url('../images/promotion_h1_mobile.png') no-repeat; background-position: 0 0; background-size: 100% 100%;}
 }
 @media (max-width: 500px) {
     .offer h1 {font-size: 34px;}
     .offer h1:before {width: 50px; height: 50px; }
+}
+@media (max-width: 400px) {
+    .offer h1 {font-size: 30px;}
 }
 header {
         margin: 0;
@@ -290,6 +300,9 @@ header {
         width: 100%;
         padding-top: 30px;
         z-index: 100;
+        -webkit-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
 }
 header .wrapper {
         display: flex;
@@ -351,6 +364,8 @@ nav li a:hover {
     background-color: rgba(255,255,255, .2);
 }
 nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0; margin: auto;}
+
+
 /* ------- menu toggle --------- */
 .menu-button                     {    display: none;}
 .menu-button                     {
@@ -361,17 +376,18 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
                                      padding: 0;
                                      cursor: pointer;
                                      position: relative;
-                                     background: url('../images/open.png');
+                                     background: url('../images/open_1.png');
                                      background-repeat: no-repeat;
                                      -webkit-background-size: 100% 100%;
                                           -o-background-size: 100% 100%;
                                              background-size: 100% 100%;
                                  }
 
-
+#indexPage .menu-button    {background: url('../images/open_1.png');}
 
 @media (max-width: 800px) {
-    #indexPage                  {   background-color: #121212; background-image: url("../images/index_bg_mobile.jpg"); background-position: 50% 0%; background-size: 100% auto; background-repeat: repeat;}
+    #indexPage                  {   background-color: #121212; background-image: url("../images/index_bg_mobile.jpg"); 
+                                    background-position: 50% 0%; background-size: 100% auto; background-repeat: repeat;}
     .menu-button                {    position: fixed;
                                      top: 16px;
                                      right: 15px;
@@ -407,7 +423,7 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
                                 }
     header                     {    position: fixed; min-height: 54px;}
     header.active nav          {    left: 0;}
-    header.active .logo        {    position: fixed; z-index: 101; top: 5px; left: 10px;}
+    header.active .logo        {    position: fixed; z-index: 101; top: 15px; left: 10px;}
     nav ul                     {    border-top: 1px solid #474747;
                                     padding-top: 25px;
                                     text-align: left;
@@ -471,7 +487,7 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
             border-radius: 50%;
 }
 .slick-dots li.slick-active {
-    background-color: transparent;
+    background-color: #525252;
 }
 .slick-dots li button {
     display: none;
@@ -502,6 +518,7 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
     top: 370px;
     z-index: 10;
 }
+.slick-arrow:before {display: none;}
 .slick-prev {
     background-image: url("../images/prev.png");
     left: 0;
@@ -568,8 +585,7 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
 
 
 /*--- we Do --- */
-.weDo,
-.ourOffers_slider  {
+.weDo  {
         display: flex;
         -webkit-display: flex;
         -webkit-justify-content: space-between;
@@ -644,7 +660,7 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
         justify-content: space-between;
         -webkit-align-items: start;
         align-items: start;
-        margin: 70px 0 80px;
+        margin: 70px 0 80px !important;
         text-align: left;
 }
 .steps_item {
@@ -707,9 +723,12 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
    .infoBlock  {padding-left: 80px;}
 }
 @media (max-width: 400px) {
-   .steps_item {text-align: center; padding: 0 10px;}
-   .infoBlock p {font-size: 16px; max-width: 99%;}
+   .steps_item {text-align: center; padding: 0 25px;}
+   .infoBlock  {padding-left: 72px;}
+   .infoBlock p {font-size: 15px; max-width: 99%;}
    .steps p {font: 15px/22px 'helveticaneuecyrlight';}
+   .infoBlock h2  {max-width: 95%;}
+   .infoBlock__icon {transform: scale(.8); -webkit-transform: scale(.8);}
 }
 
 
@@ -718,9 +737,7 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
     margin: 70px 0 90px; 
 }
 .ourOffers_slider {
-       -webkit-justify-content: start;
-    justify-content: start;
-    margin-bottom: 55px; 
+    text-align: left;
 }
 .ourOffers_slider .slick-list,
 .ourOffers_slider .slick-track {width: 100% ;}
@@ -730,6 +747,9 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
     margin-bottom: 30px;
     height: 75px;
     overflow: visible;
+    margin-right: -4px;
+    display: inline-block;
+    vertical-align: middle;
 }
 .ourOffers_item:before {
     content: "";
@@ -751,6 +771,7 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
     background: url('../images/icons.png') no-repeat;
     overflow: hidden;
 }
+.ourOffers_slider>span {margin-right: -3px;}
 
 .ourOffers_item:nth-of-type(1) i {background-position: -4px -0px; width: 36px; height: 21px;}
 .ourOffers_item:nth-of-type(2) i {background-position: -4px -221px; width: 32px; height: 32px;}
@@ -764,6 +785,32 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
 .ourOffers_item:nth-of-type(10) i {background-position: -4px -257px; width: 32px; height: 31px;}
 .ourOffers_item:nth-of-type(11) i {background-position: -4px -80px; width: 35px; height: 35px;}
 
+.ourOffers_slider .slick-arrow,
+.steps .slick-arrow {height: 45px; width: 24px; top: 38%; 
+        background-size: 100% 100%;}
+.ourOffers_slider .slick-prev,
+.steps .slick-prev {background-image: url("../images/arrow_prev.png"); left: 10px;}
+.ourOffers_slider .slick-next,
+.steps .slick-next {background-image: url("../images/arrow_next.png"); right: 10px; }
+
+.ourOffers_slider .slick-prev:hover,
+.steps .slick-prev:hover {background-image: url("../images/arrow_prev.png"); background-size: 100% 100%;}
+.ourOffers_slider .slick-next:hover,
+.steps .slick-next:hover {background-image: url("../images/arrow_next.png"); background-size: 100% 100%;}
+
+.ourOffers_slider .slick-dots,
+.steps  .slick-dots {text-align: center; bottom: -10px; left: 0; right: 0; margin: auto;}
+.steps  .slick-dots {bottom: -40px;}
+.ourOffers_slider .slick-dots:before, .ourOffers_slider  .slick-dots:after,
+.steps .slick-dots:after,
+ .steps .slick-dots:before {display: none;}
+.ourOffers_slider .slick-dots li,
+.steps  .slick-dots li {display: inline-block; width: 16px; height: 16px; border: 1px solid #525252;}
+.ourOffers_slider .slick-dots li button,
+.steps .slick-dots li button {background: #525252;}
+.ourOffers_slider .slick-dots li button,
+.steps .slick-dots li button {display: none;}
+
 @media (max-width: 1250px) {
     .ourOffers_item {width: 33%;}
 }
@@ -771,15 +818,34 @@ nav .button {display: none; position: absolute; bottom: 10px; left: 0; right: 0;
     .ourOffers_item {width: 50% ;}
 }
 @media (max-width: 801px) {
-    .ourOffers_item {width: 100;}
-    .ourOffers_slider {
-          -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-          flex-direction: column
-    }
+    .ourOffers_item {width: 340px; height: auto; margin: 0 auto 30px; display: block; text-align: center;}
+    .ourOffers_slider  {margin-bottom: 25px;}
+    .ourOffers > p {text-align: center; font-size: 18px;}
+    .ourOffers_item p {font-size: 18px;}
+}
+@media (max-width: 500px) {
+    .ourOffers_item {width: 310px; height: auto;}
+    .ourOffers > p {font-size: 16px; width: 90%; margin: 0 auto;}
+    .ourOffers > p br {display: none;}
+    .ourOffers_item p {font-size: 16px;}
+}
+@media (max-width: 400px) {
+.ourOffers_slider .slick-arrow,
+.steps .slick-arrow {height: 40px; width: 20px; top: 35%; }
+.steps .slick-arrow {top: 45%;}
+.ourOffers_slider .slick-prev,
+.steps .slick-prev {left: 2px;}
+.ourOffers_slider .slick-next,
+.steps .slick-next {right: 2px;}
+.ourOffers > p {font-size: 14px; width: 95%;}
+.ourOffers_item p {font-size: 14px;}
+.ourOffers_item i {margin: 0 10px;}
+.ourOffers_item {width: 290px;}
 }
 
-
+@media (max-width: 330px) {
+    .steps p {font: 14px/20px 'helveticaneuecyrlight';}
+}
 
 
 /*---------------------------------------------------------------*/

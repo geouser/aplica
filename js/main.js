@@ -79,6 +79,8 @@ $('.offerSlider').on('afterChange', function(event, slick, currentSlide, nextSli
 $('.steps').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
+    dots: true,
+    arrows:true,
     responsive: [
       {
         breakpoint: 801,
@@ -89,6 +91,19 @@ $('.steps').slick({
       }
     ]
 });
+
+if (window.matchMedia('(max-width: 801px)').matches)
+{
+  $('.ourOffers_slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows:true
+});
+
+  
+}
+
 
 });
 
