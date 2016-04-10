@@ -31,9 +31,9 @@ jQuery(document).ready(function($) {
     $(this).toggleClass('active');
     $(this).parent().parent('header').toggleClass('active');
     if ($('header').hasClass('active')) {
-      $('body').css('overflow', 'hidden');
+      $('body, html').css('overflow', 'hidden');
     } else {
-      $('body').css('overflow', 'visible');
+      $('body, html').css('overflow', 'visible');
     }
   });
 
@@ -110,6 +110,113 @@ jQuery(document).ready(function($) {
       ]
   });
 
+
+  $('.filterButtons').slick({
+      slidesToShow: 10,
+      slidesToScroll: 1,
+      dots: true,
+      arrows:true,
+      responsive: [
+        {
+          breakpoint: 1150,
+          settings: {
+            slidesToShow: 9,
+            slidesToScroll: 9
+          }
+        },
+        {
+          breakpoint: 1060,
+          settings: {
+            slidesToShow: 8,
+            slidesToScroll: 8
+          }
+        },
+        {
+          breakpoint: 970,
+          settings: {
+            slidesToShow: 7,
+            slidesToScroll: 7
+          }
+        },
+        {
+          breakpoint: 880,
+          settings: {
+            slidesToShow: 6,
+            slidesToScroll: 6
+          }
+        },
+        {
+          breakpoint: 790,
+          settings: {
+            slidesToShow: 5,
+            slidesToScroll: 5
+          }
+        },
+        {
+          breakpoint: 650,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        },
+        {
+          breakpoint: 400,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        }
+      ]
+  });
+
+
+
+  /*Slider on APPS PAGE*/
+  urlHash = function()
+  {
+    return window.location.hash.replace('#','');
+  };
+  setSlide = function (slider, index) {
+    slider.slick('slickGoTo', index);
+  }
+  // On before slide change
+  var slide, slideIndex;
+  $('.apps_slider').on('init', function(event, slick){
+    if (urlHash()) {
+      slide = $(this).find('.slide[data-app='+urlHash()+']');
+      slideIndex = slide.data('slick-index');
+    } else {
+      slide = $(this).find('.slide[data-slick-index=0]');
+      slideIndex = 0;
+    }
+  });
+  
+  $('.apps_slider').slick({
+    dots: false,
+    arrows: true,
+    infinite: false
+  });
+  setSlide($('.apps_slider'), slideIndex);
+
+  $('.apps_slider').on('afterChange', function(event, slick, currentSlide){
+    var slide = $(this).find('.slide[data-slick-index='+currentSlide+']');
+    var appText = $('.app_text[data-app-group='+slide.data('app')+']');
+    $('.app_text').css('display', 'none');
+    appText.css('display', 'block');
+  });
+
+
+
+
+  
+
   if (window.matchMedia('(max-width: 801px)').matches) {
     $('.ourOffers_slider').slick({
       slidesToShow: 1,
@@ -162,7 +269,7 @@ var filtering = (function( $ ) {
         $('.filterButton__button.active').removeClass('active');
       }
 
-      $this.addClass('active');
+      $this.toggleClass('active');
       $('html, body').stop().animate({scrollTop: $('.shuffle_container').offset().top }, '500', 'swing');
 
       // Filter elements
