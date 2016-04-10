@@ -20,6 +20,7 @@
     </head>
     <body id="portfolioPage">
 
+
         <header>
             <div class="wrapper">
                 <div class="logo">
@@ -58,7 +59,7 @@
                 </nav><!-- end nav -->
                 <button class="menu-button">
                 </button>
-            </div>
+            </div><!-- end wrapper --> 
         </header><!-- end header -->
 
 
@@ -69,22 +70,216 @@
                 <button class="button green-border">
                     Заказать приложение
                 </button>
-            </div>
+                <div class="filterButtons"> 
+                    <div class="filterButton">
+                        <div class="filterButton__button" data-group="all">
+                            <i></i>
+                            <span>
+                                Все платформы
+                            </span>
+                        </div>
+                    </div>
+                    <div class="filterButton">
+                        <div class="filterButton__button" data-group="ios">
+                            <i></i>
+                            <span>
+                                iOS
+                            </span>
+                        </div>
+                    </div>
+                    <div class="filterButton">
+                        <div class="filterButton__button" data-group="android">
+                            <i></i>
+                            <span>
+                                Android
+                            </span>
+                        </div>
+                    </div>
+                    <div class="filterButton">
+                        <div class="filterButton__button" data-group="windows">
+                            <i></i>
+                            <span>
+                                Windows Phone
+                            </span>
+                        </div>
+                    </div>
+                    <div class="filterButton">
+                        <div class="filterButton__button"  data-group="html5">
+                            <i></i>
+                            <span>
+                                HTML 5
+                            </span>
+                        </div>
+                    </div>
+                    <div class="filterButton">
+                        <div class="filterButton__button"  data-group="all">
+                            <i></i>
+                            <span>
+                                Все проекты
+                            </span>
+                        </div>
+                    </div>
+                    <div class="filterButton">
+                        <div class="filterButton__button"  data-group="ordered">
+                            <i></i>
+                            <span>
+                                Заказные
+                            </span>
+                        </div>
+                    </div>
+                    <div class="filterButton">
+                        <div class="filterButton__button" data-group="own">
+                            <i></i>
+                            <span>
+                                Собственные
+                            </span>
+                        </div>
+                    </div>
+                    <div class="filterButton">
+                        <div class="filterButton__button"  data-group="developing">
+                            <i></i>
+                            <span>
+                                В разработке
+                            </span>
+                        </div>
+                    </div>
+                    <div class="filterButton">
+                        <div class="filterButton__button" data-group="scetch">
+                            <i></i>
+                            <span>
+                                Эскизы
+                            </span>
+                        </div>
+                    </div>
+                </div><!-- end filter buttons --> 
+            </div><!-- end wrapper --> 
         </section><!-- end offer section --> 
 
-        <section class="content">
-            <div class="wrapper">
+        <section class="content shuffle_container">
 
-                
+            <div class="work work--grey" data-groups='["all", "ios"]'>
+                <div class="wrapper">
+                    <h2>
+                        iRealtor
+                        <span>Ваш личный мобильный риелтор</span>    
+                    </h2>
+                    <div class="work__img">
+                        <img src="images/iRealtor.png" alt="">
+                    </div>
+                    <div class="work__info">
+                        <p>
+                            Приложение iRealtor — это мобильный клиент портала Realty.dmir.ru.С помощью iRealtor можно купить, продать или арендовать дом, квартиру,участок или офис в любом городе России. В Аплике спроектировали, нарисовали и запрограммировали приложение в версиях под iOS и Android для смартфонов и планшетов.
+                        </p>
+                        <div class="work__info__platform">
+                            <i active data-name="ios"></i>
+                            <i  data-name="android"></i>  
+                            <i  data-name="windows"></i>    
+                            <i  data-name="html5"></i>  
+                        </div>
+                    </div>
+                </div>  
+            </div><!-- end work iRealtor -->  
 
-            </div>
+            <div class="work"  data-groups='["all", "ios", "android", "windows"]'>
+                <div class="wrapper">
+                    <h2>
+                        OneScore
+                        <span>Самая полезная партнерская программа</span>    
+                    </h2>
+                    <div class="work__img">
+                        <img src="images/onescore.png" alt="">
+                    </div>
+                    <div class="work__info">
+                        <p>
+                            Приложение OneScore копит бонусные баллы, пока пользователь стоите в пробке. Эти баллы затем обмениваются на товары или услуги у партнеров. В Аплике запрограммировали проект вместе с серверной частью, основным iOS- и вспомогательным Android-приложением.
+                        </p>
+                        <div class="work__info__platform">
+                            <i active data-name="ios" ></i>
+                            <i active data-name="android"></i>  
+                            <i active data-name="windows"></i>    
+                            <i  data-name="html5"></i>  
+                        </div>
+                    </div> 
+                </div> 
+            </div><!-- end work OneScore-->  
+
+            <div class="work work--grey" data-groups='["all", "ios"]'>
+                <div class="wrapper">
+                    <h2>
+                        Раскраска Disney
+                        <span>Детская раскраска</span>    
+                    </h2>
+                    <div class="work__img">
+                        <img src="images/packpacka.png" alt="">
+                    </div>
+                    <div class="work__info">
+                        <p>
+                            По заказу Disney в Аплике была спроектирована, нарисована и запрограммирована детская раскраска для iPad. В ней маленькие пользователи встречают героев известных мультфильмов студии: от Винни-Пуха и Микки Мауса до Молнии МакКуин и Ариэль.
+                        </p>
+                        <div class="work__info__platform">
+                            <i active data-name="ios"></i>
+                            <i data-name="android"></i>  
+                            <i data-name="windows"></i>    
+                            <i data-name="html5"></i>  
+                        </div>
+                    </div>  
+                </div>
+            </div><!-- end work Раскраска Disney-->  
+
+            <div class="work"  data-groups='["all", "ios"]'>
+                <div class="wrapper">
+                    <h2>
+                        РВС
+                        <span>Мобильный инструмент управления проектами</span>    
+                    </h2>
+                    <div class="work__img">
+                        <img src="images/rbc.png" alt="">
+                    </div>
+                    <div class="work__info">
+                        <p>
+                            ППриложение РВС — это мобильный инструмент управления проектами, реализуемыми на территории России и стран СНГ, одноименной инжиниринговой компанией. В Аплике спроектировали, нарисовали и запрограммировали приложение в версии под iPhone.
+                        </p>
+                        <div class="work__info__platform">
+                            <i active data-name="ios"></i>
+                            <i data-name="android"></i>  
+                            <i data-name="windows"></i>    
+                            <i data-name="html5"></i>  
+                        </div>
+                    </div> 
+                </div> 
+            </div><!-- end work РВС-->
+
+            <div class="work work--grey"  data-groups='["all", "ios", "windows", "html5"]'>
+                <div class="wrapper">
+                    <h2>
+                        Xerox Sales Expert
+                        <span>Приложение Xerox Sales Expert</span>    
+                    </h2>
+                    <div class="work__img">
+                        <img src="images/xerox.png" alt="">
+                    </div>
+                    <div class="work__info">
+                        <p>
+                            Приложение Xerox Sales Expert — это мобильная версия сайта X-City, на котором торговые представители получают подробную информацию о продукции Xerox и текущих маркетинговых программах. В Аплике спроектировали и запрограммировали приложение
+                        </p>
+                        <div class="work__info__platform">
+                            <i active data-name="ios"></i>
+                            <i data-name="android"></i>  
+                            <i active data-name="windows"></i>    
+                            <i active data-name="html5"></i>  
+                        </div>
+                    </div> 
+                </div> 
+            </div><!-- end work Xerox Sales Expert-->                     
+
         </section><!-- end content section --> 
 
 
   	    <!-- //////////////////////////////////////////////////////////////////////// -->
 
 
-        <footer class="footer--secondary footer--darkBlue">
+        <footer class="footer--secondary footer--velvet">
+
             <div class="wrapper clearfix">
                 <p>Пректирование, дизайн, программирование, <br>поддержка и продвижени</p>
                 <div class="buttons">
