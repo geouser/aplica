@@ -1423,7 +1423,9 @@ footer p.copy {
 .footer--blue:after {
   background-color: #00a0dc;
 }
-
+.footer--darkBlue:after {
+  background-color: #2d56b2;
+}
 
 
 
