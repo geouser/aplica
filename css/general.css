@@ -108,6 +108,9 @@ h1 {
 h2 {
   font-size: 36px;
 }
+a:hover, a:active, a:focus {
+  outline: 0;
+}
 
 @media (max-width: 600px) {
     h2 {font-size: 28px;}
@@ -378,11 +381,26 @@ section.content {padding: 70px 0 240px;}
 }
 .explain:before {
     content: url('../images/brackets.png');
+    height: 54px;
     display: inline-block;
     vertical-align: middle;
     left: 0;
     position: absolute;
-    top: -4px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+@media (max-width: 1200px) {
+    .explain {font: 16px/22px 'helveticaneuecyrlight';}
+    .explain br {display: none;}
+}
+@media (max-width: 1120px) {
+    #promotionPage .offer .wrapper {
+      -webkit-justify-content: center;
+            justify-content: center;}
+    .explain  {width: 85%; text-align: center; margin: 20px auto;}
+    .explain:before {display: none;}
 }
 
 @media (max-width: 800px) {
@@ -586,6 +604,9 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
 
 .offerSlider {
     height: 900px;
+}
+.offerSlider_slide {
+  margin-top: 180px;
 }
 .offerSlider_slide h2 {
     font: 36px 'helveticaneuecyrlight';
@@ -1167,7 +1188,7 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
 }
 .work__img {
 display: inline-block;
-vertical-align: top;
+vertical-align: bottom;
 width: 26%;
 margin-top: -140px;
 }
@@ -1178,7 +1199,7 @@ margin-top: -140px;
 display: inline-block;
 vertical-align: top;
 width: 73%;
-padding: 0px 32% 0 55px;
+padding: 0px 32% 40px 55px;
 text-align: left;
 }
 .work__info p {
@@ -1210,7 +1231,7 @@ text-align: left;
   background-image: url("../images/arrow_more.png");
   background-size: 100% 100%;
   position: absolute;
-  right: 0;
+  right: 20px;
   top: 150px;
 }
 
@@ -1225,7 +1246,7 @@ text-align: left;
   .work__img  {width: 95%;}
   .work__info {padding: 20px 0 0 0px; width: 100%; text-align: center;}
   .work__info__platform {text-align: center; margin-bottom: 20px; text-align: center;}
-  .work__more  {top: 0px;}
+  .work__more  {top: 3px; right: 10px}
 }
 
 
