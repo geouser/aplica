@@ -1142,6 +1142,7 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
 
 /*--- portfolio works --- */
 .work {padding-top: 100px; width: 100%;}
+.work .wrapper {position: relative;}
 .work--grey {background-color: #F3F3F3;}
 
 .work h2 {
@@ -1195,17 +1196,28 @@ text-align: left;
 .work__info__platform i[data-name="windows"] {background-position: -62px -57px;}
 .work__info__platform i[data-name="html5"]   {background-position: -5px -57px;}
 
+.work__more {
+  width: 10px;
+  height: 18px;
+  background-image: url("../images/arrow_more.png");
+  background-size: 100% 100%;
+  position: absolute;
+  right: 0;
+  top: 150px;
+}
 
 @media (max-width: 801px) {
   .work h2    {padding-left: 10px;}
   .work__img  {margin-top: 0; width: 40%; vertical-align: bottom;}
-  .work__info {padding: 0 0 0 20px; width: 58%;}
+  .work__info {padding: 0 10px 0 20px; width: 58%;}
+  .work__more {top: 20px; right: 20px; width: 15px; height: 27px;}
 }
 @media (max-width: 501px) {
   .work h2    {padding-left: 0; text-align: center;}
   .work__img  {width: 95%;}
   .work__info {padding: 20px 0 0 0px; width: 100%; text-align: center;}
   .work__info__platform {text-align: center; margin-bottom: 20px; text-align: center;}
+  .work__more  {top: 0px;}
 }
 
 
