@@ -1060,6 +1060,14 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
    Portfolio page 
    -------------------------------------- */
 #portfolioPage .content {padding: 0;}
+#portfolioPage .offer.centered h1::before {
+  background-image: url(../images/portfolio-icon.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+
 
 /*--- portfolio filter buttons --- */
 
@@ -1069,7 +1077,6 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
   position: relative;
   width: 86px;
   height: 86px;
-  background-image: url("../images/icons_filter.png");
   -webkit-border-radius: 50%;
           border-radius: 50%;
 }
@@ -1096,10 +1103,6 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
 }
 .filterButton__button.active,
 .filterButton__button:hover {
-  -webkit-transform: scale(1.1);
-   -ms-transform: scale(1.1);
-   -o-transform: scale(1.1);
-   transform: scale(1.1); 
 }
 .filterButton span {
   color: #FFF;
@@ -1126,36 +1129,51 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
 
 
 
-.filter-all {
-  background-position: 0 0;
+.filter-all-projects-hover, .filter-all-projects, .filter-all-hover, .filter-all, .filter-android-hover, 
+.filter-android, .filter-apple-hover, .filter-apple, .filter-developing-hover, .filter-developing, 
+.filter-html5-hover, .filter-html5, .filter-ordered-hover, .filter-ordered, .filter-own-hover, 
+.filter-own, .filter-scketch-hover, .filter-scketch, .filter-windows-hover, .filter-windows
+{ max-width: 100%; background-size: 100%; background-image: url('../images/icons_filter.png'); }
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+  .filter-all-projects-hover, .filter-all-projects, .filter-all-hover, .filter-all, .filter-android-hover, 
+  .filter-android, .filter-apple-hover, .filter-apple, .filter-developing-hover, .filter-developing, 
+  .filter-html5-hover, .filter-html5, .filter-ordered-hover, .filter-ordered, .filter-own-hover, 
+  .filter-own, .filter-scketch-hover, .filter-scketch, .filter-windows-hover, .filter-windows
+  { max-width: 100%; background-size: 100%; background-image: url('../images/icons_filter@2x.png'); }
 }
-.filter-apple {
-  background-position: -126px 0;
-}
-.filter-android {
-  background-position: -253px 0;
-}
-.filter-windows {
-  background-position: -380px 0;
-}
-.filter-html5 {
-  background-position: -507px 0;
-}
-.filter-all-projects {
-  background-position: -633px 0;
-}
-.filter-ordered {
-  background-position: -759px 0;
-}
-.filter-own {
-  background-position: -886px 0;
-}
-.filter-developing {
-  background-position: -1013px 0;
-}
-.filter-scketch {
-  background-position: -1140px 0;
-}
+.filterButton__button.active .filter-all-projects,
+.filterButton__button:hover .filter-all-projects { background-position: 0 0%; background-size: 100%; }
+.filter-all-projects { background-position: 0 5.263158%; background-size: 100%; }
+.filterButton__button.active .filter-all,
+.filterButton__button:hover .filter-all { background-position: 0 10.526316%; background-size: 101.162791%; }
+.filter-all { background-position: 0 15.789474%; background-size: 101.162791%; }
+.filterButton__button.active .filter-android,
+.filterButton__button:hover .filter-android { background-position: 0 21.052632%; background-size: 101.162791%; }
+.filter-android { background-position: 0 26.315789%; background-size: 101.162791%; }
+.filterButton__button.active .filter-apple,
+.filterButton__button:hover .filter-apple { background-position: 0 31.578947%; background-size: 101.162791%; }
+.filter-apple { background-position: 0 36.842105%; background-size: 101.162791%; }
+.filterButton__button.active .filter-developing,
+.filterButton__button:hover .filter-developing { background-position: 0 42.105263%; background-size: 101.162791%; }
+.filter-developing { background-position: 0 47.368421%; background-size: 101.162791%; }
+.filterButton__button.active .filter-html5,
+.filterButton__button:hover .filter-html5 { background-position: 0 52.631579%; background-size: 101.162791%; }
+.filter-html5 { background-position: 0 57.894737%; background-size: 101.162791%; }
+.filterButton__button.active .filter-ordered,
+.filterButton__button:hover .filter-ordered { background-position: 0 63.157895%; background-size: 101.162791%; }
+.filter-ordered { background-position: 0 68.421053%; background-size: 101.162791%; }
+.filterButton__button.active .filter-own,
+.filterButton__button:hover .filter-own { background-position: 0 73.684211%; background-size: 101.162791%; }
+.filter-own { background-position: 0 78.947368%; background-size: 101.162791%; }
+.filterButton__button.active .filter-scketch,
+.filterButton__button:hover .filter-scketch { background-position: 0 84.210526%; background-size: 101.162791%; }
+.filter-scketch { background-position: 0 89.473684%; background-size: 101.162791%; }
+.filterButton__button.active .filter-windows,
+.filterButton__button:hover .filter-windows { background-position: 0 94.736842%; background-size: 101.162791%; }
+.filter-windows { background-position: 0 100%; background-size: 101.162791%; }
 
 @media (max-width: 800px) {
   .offer--portfolio h1 {
@@ -1214,16 +1232,18 @@ text-align: left;
   height: 52px;
   display: inline-block;
   margin: 0 2px;
-  background: url('../images/brands_colored.png') no-repeat; overflow: hidden;
+  background-size: 100%; background-image: url('../images/brands_colored.png');
+  overflow: hidden;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   opacity: .6;
 }
+
 .work__info__platform i[active] {opacity: 1;  -webkit-filter: none; filter: none;}
-.work__info__platform i[data-name="ios"] { background-position: -62px -0px;}
-.work__info__platform i[data-name="android"] {background-position: -5px -0px;}
-.work__info__platform i[data-name="windows"] {background-position: -62px -57px;}
-.work__info__platform i[data-name="html5"]   {background-position: -5px -57px;}
+.work__info__platform i[data-name="ios"] { background-position: 0 0%; background-size: 100%;}
+.work__info__platform i[data-name="android"] {background-position: 0 33.333333%; background-size: 100.970874%;}
+.work__info__platform i[data-name="windows"] { background-position: 0 100%; background-size: 100.970874%; }
+.work__info__platform i[data-name="html5"]   {background-position: 0 66.666667%; background-size: 100.970874%;}
 
 .work__more {
   width: 10px;
