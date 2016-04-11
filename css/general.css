@@ -339,10 +339,12 @@ section.content {padding: 70px 0 240px;}
     content: "";
     width: 75px;
     height: 75px;
-    background: url('../images/icons_2.png') no-repeat; overflow: hidden;
-    background-position: -5px -662px; width: 73px; height: 73px;
+    background-image: url('../images/icons_2@2x.png');
+    background-position: 0 100%; background-size: 101.369863%;
+    width: 73px; height: 73px;
     margin-right: 17px;
 }
+
 .offer.centered h1,
 .offer.centered  h1:before, 
 .offer.centered p {
@@ -692,6 +694,7 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
 .runSlider img {
     display: block;
     margin: 0 auto 20px;
+    width: 131px;
 }
 .runSlider span {
     font: 24px 'helveticaneuecyrlight';
@@ -766,6 +769,7 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
 }
 .weDo_item img {
     margin-bottom: 35px;
+    width: 103px;
 }
 .weDo_item h3 {
     font: 24px 'helveticaneuecyrlight';
@@ -786,6 +790,7 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
 .weDo_item_name img {
     display: block;
     margin: 20px auto 0;
+    width: 39px;
 }
 
 
@@ -868,6 +873,20 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
 .infoBlock__icon.fourth  { background-position: -5px -583px; width: 74px; height: 74px; }
 
 
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 144dpi) { 
+  .infoBlock__icon {
+    background-size: 100%; background-image: url('../images/icons_2@2x.png');
+  }
+  .infoBlock__icon.first   { background-position: 0 0%; background-size: 100%; }
+  .infoBlock__icon.second  { background-position: 0 25.079365%; background-size: 100%; }
+  .infoBlock__icon.third   { background-position: 0 75.238095%; background-size: 100%;  }
+  .infoBlock__icon.fourth  { background-position: 0 50.15873%; background-size: 100%; }
+}
+
+
 #aboutPage .infoBlock__icon.first {background-image: url("../images/circle_about_2.png"); background-position: 50% 50%;}
 @media 
 (-webkit-min-device-pixel-ratio: 2), 
@@ -946,7 +965,7 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
 .icon-08, .icon-04, .icon-02, .icon-10, .icon-05, 
 .icon-09
 { display: inline-block; background: url('../images/icons.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
- 
+
 .icon-01 { background-position: -4px -0px; width: 36px; height: 21px; }
 .icon-06 { background-position: -4px -25px; width: 35px; height: 25px; }
 .icon-07 { background-position: -4px -54px; width: 35px; height: 22px; }
@@ -958,6 +977,30 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
 .icon-10 { background-position: -4px -257px; width: 32px; height: 31px; }
 .icon-05 { background-position: -4px -292px; width: 30px; height: 28px; }
 .icon-09 { background-position: -4px -324px; width: 30px; height: 28px; }
+
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 144dpi) { 
+    .icon-01, .icon-06, .icon-07, .icon-11, .icon-03, 
+    .icon-08, .icon-04, .icon-02, .icon-10, .icon-05, 
+    .icon-09
+    { background-size: 100%; background-image: url('../images/icons@2x.png'); display: inline-block;}
+ 
+    .icon-01 { background-position: 0 0%; background-size: 100%; }
+    .icon-06 { background-position: 0 7.715134%; background-size: 102.857143%; }
+    .icon-07 { background-position: 0 16.470588%; background-size: 102.857143%; }
+    .icon-11 { background-position: 0 25.382263%; background-size: 102.857143%; }
+    .icon-03 { background-position: 0 36.390533%; background-size: 105.882353%; }
+    .icon-08 { background-position: 0 46.341463%; background-size: 105.882353%; }
+    .icon-04 { background-position: 0 57.878788%; background-size: 109.090909%; }
+    .icon-02 { background-position: 0 69.090909%; background-size: 112.5%; }
+    .icon-10 { background-position: 0 80.060423%; background-size: 112.5%; }
+    .icon-05 { background-position: 0 90.11976%; background-size: 120%; }
+    .icon-09 { background-position: 0 100%; background-size: 120%; }
+}
+
+
 
 .ourOffers_slider .slick-arrow,
 .steps .slick-arrow {height: 45px; width: 24px; top: 38%; 
@@ -1495,18 +1538,39 @@ text-align: left;
 
 .icon-appstore-dark, .icon-appstore-white, .icon-android-white, .icon-apple-white, .icon-facebook-dark, 
 .icon-facebook-white, .icon-html5-white, .icon-twitter-dark, .icon-twitter-white, .icon-windows-white
-{ display: inline-block; background: url('../images/apps-icons.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
- 
-.icon-appstore-dark { background-position: -4px -0px; width: 146px; height: 51px; }
-.icon-appstore-white { background-position: -4px -55px; width: 146px; height: 51px; }
-.icon-android-white { background-position: -4px -110px; width: 52px; height: 52px; }
-.icon-apple-white { background-position: -60px -110px; width: 52px; height: 52px; }
-.icon-facebook-dark { background-position: -4px -166px; width: 52px; height: 53px; }
-.icon-facebook-white { background-position: -60px -166px; width: 52px; height: 52px; }
-.icon-html5-white { background-position: -60px -222px; width: 52px; height: 52px; }
-.icon-twitter-dark { background-position: -4px -223px; width: 52px; height: 53px; }
-.icon-twitter-white { background-position: -60px -278px; width: 52px; height: 52px; }
-.icon-windows-white { background-position: -4px -280px; width: 52px; height: 52px; }
+{ display: inline-block; background: url('../images/apps-icons.png') no-repeat; overflow: hidden; text-align: left; background-size: 100%; }
+
+.icon-appstore-dark { background-position: 0 0%; background-size: 100%; width: 146px; height: 51px; }
+.icon-appstore-white { background-position: 0 10.894942%; background-size: 100%; width: 146px; height: 51px; }
+.icon-android-white { background-position: 0 21.832359%; background-size: 280.769231%; width: 52px; height: 52px; }
+.icon-apple-white { background-position: 0 32.94347%; background-size: 280.769231%; width: 52px; height: 52px; }
+.icon-facebook-dark { background-position: 0 44.140625%; background-size: 280.769231%; width: 52px; height: 53px; }
+.icon-facebook-white { background-position: 0 55.360624%; background-size: 280.769231%; width: 52px; height: 52px; }
+.icon-html5-white { background-position: 0 66.471735%; background-size: 280.769231%; width: 52px; height: 52px; }
+.icon-twitter-dark { background-position: 0 77.734375%; background-size: 280.769231%; width: 52px; height: 53px; }
+.icon-twitter-white { background-position: 0 88.888889%; background-size: 280.769231%; width: 52px; height: 52px; }
+.icon-windows-white { background-position: 0 100%; background-size: 280.769231%; width: 52px; height: 52px; }
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 144dpi) { 
+  .icon-appstore-dark, .icon-appstore-white, .icon-android-white, .icon-apple-white, .icon-facebook-dark, 
+  .icon-facebook-white, .icon-html5-white, .icon-twitter-dark, .icon-twitter-white, .icon-windows-white
+  { display: inline-block; background: url('../images/apps-icons@2x.png') no-repeat; overflow: hidden; text-align: left; background-size: 100%; }
+   
+  .icon-appstore-dark { background-position: 0 0%; background-size: 100%; }
+  .icon-appstore-white { background-position: 0 11.001965%; background-size: 100%; }
+  .icon-apple-white { background-position: 0 22.025565%; background-size: 280.769231%; }
+  .icon-facebook-dark { background-position: 0 33.169291%; background-size: 280.769231%; }
+  .icon-facebook-white { background-position: 0 44.346116%; background-size: 280.769231%; }
+  .icon-twitter-dark { background-position: 0 55.511811%; background-size: 280.769231%; }
+  .icon-twitter-white { background-position: 0 66.666667%; background-size: 280.769231%; }
+  .icon-android-white { background-position: 0 77.777778%; background-size: 283.495146%; }
+  .icon-html5-white { background-position: 0 88.888889%; background-size: 283.495146%; }
+  .icon-windows-white { background-position: 0 100%; background-size: 283.495146%; }
+}
+
+
 
 .filterButtons .slick-arrow:before,
 .apps_slider .slick-arrow:before,
@@ -1816,7 +1880,19 @@ text-align: left;
 .package__main p.icon_aud:before {
   background-image: url(../images/start_3.png);
 }
-
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 144dpi) { 
+    .package__main p.icon_start:before {
+    background-image: url(../images/start_1@2x.png);
+  }
+  .package__main p.icon_top:before {
+    background-image: url(../images/start_2@2x.png);
+  }
+  .package__main p.icon_aud:before {
+    background-image: url(../images/start_3@2x.png);
+  }
+}
 .package__features {
   display: block;
   text-align: left;
@@ -1943,7 +2019,8 @@ text-align: left;
   margin: 0 auto 20px;
   width: 103px;
   height: 103px;
-  background: url(../images/reviews-icon.png) 50% 50% no-repeat;
+  background: url(../images/reviews-icon@2x.png) 50% 50% no-repeat;
+  background-size: 100%;
 }
 .reviews h2 {
   color: #fff;
@@ -2295,7 +2372,7 @@ footer p.copy {
   margin: 0 auto; 
   width: 131px;
   height: 131px;
-  background-image: url(../images/icon-error.png);
+  background-image: url(../images/icon-error@2x.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
