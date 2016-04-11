@@ -41,7 +41,7 @@ jQuery(document).ready(function($) {
   $(function() { // add class on scroll
     var $document = $(document),
         $element = $('.menu-button'),
-        $element2 = $('header'),
+        $element2 = $('header, body'),
         className = 'hasScrolled';
 
     $document.scroll(function() {
@@ -203,13 +203,28 @@ jQuery(document).ready(function($) {
     arrows: true,
     infinite: false
   });
+  $('.apps_slider-mini').slick({
+    dots: false,
+    arrows: true,
+    infinite: false,
+    fade: true
+  });
   setSlide($('.apps_slider'), slideIndex);
+  setSlide($('.apps_slider-mini'), slideIndex);
+
+  $('.apps_slider-mini').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    setSlide($('.apps_slider'), nextSlide);
+  });
+  $('.apps_slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    setSlide($('.apps_slider-mini'), nextSlide);
+  });
 
   $('.apps_slider').on('afterChange', function(event, slick, currentSlide){
     var slide = $(this).find('.slide[data-slick-index='+currentSlide+']');
     var appText = $('.app_text[data-app-group='+slide.data('app')+']');
     $('.app_text').css('display', 'none');
     appText.css('display', 'block');
+    setSlide($('.apps_slider-mini'), currentSlide);
   });
 
 

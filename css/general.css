@@ -1409,7 +1409,8 @@ text-align: left;
 .icon-windows-white { background-position: -4px -280px; width: 52px; height: 52px; }
 
 .filterButtons .slick-arrow:before,
-.apps_slider .slick-arrow:before {
+.apps_slider .slick-arrow:before,
+.apps_slider-mini .slick-arrow:before {
   content: '';
   width: 13px;
   height: 13px;
@@ -1418,23 +1419,30 @@ text-align: left;
   border-left: 1px solid #fff
 }
 .filterButtons .slick-prev,
-.apps_slider .slick-prev {
+.apps_slider .slick-prev{
   left: 0;
 }
-
+.apps_slider-mini .slick-prev {
+  left: 30px;
+}
 .filterButtons .slick-next,
 .apps_slider .slick-next {
   right: 0;
 }
+.apps_slider-mini .slick-next {
+  right: 30px;
+}
 .filterButtons .slick-prev:before,
-.apps_slider .slick-prev:before {
+.apps_slider .slick-prev:before,
+.apps_slider-mini .slick-prev:before {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 .filterButtons .slick-next:before,
-.apps_slider .slick-next:before {
+.apps_slider .slick-next:before,
+.apps_slider-mini .slick-next:before {
   -webkit-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
   -o-transform: rotate(135deg);
@@ -1451,6 +1459,60 @@ text-align: left;
     top: 80px;
   }
 }
+.apps_slider-mini {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background: rgba(53, 53, 53, .94);
+  text-align: center;
+  padding: 10px 50px;
+  margin-bottom: 0!important;
+  z-index: 110;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.hasScrolled .apps_slider-mini {
+  visibility: visible;
+  opacity: 1;
+}
+.apps_slider-mini .icon {
+  display: inline-block;
+  vertical-align: middle;
+  height: 50px;
+  margin-right: 20px;
+}
+.apps_slider-mini .text {
+  width: 400px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  color: #fff;
+}
+@media (max-width: 800px) {
+  .apps_slider-mini {
+    top: 74px;
+    z-index: 50;
+    padding: 10px 20px;
+  }
+  .apps_slider-mini .icon {
+    height: 45px;
+    margin-right: 10px;
+  }
+  .apps_slider-mini .text {
+    width: 200px;
+    font-size: 14px;
+  }
+  .apps_slider-mini .slick-prev {
+    left: 10px;
+  }
+  .apps_slider-mini .slick-next {
+    right: 10px;
+  }
+}
+
+
 
 
 
