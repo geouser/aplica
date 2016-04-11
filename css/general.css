@@ -388,7 +388,7 @@ section.content {padding: 70px 0 240px;}
     vertical-align: middle;
     left: 0;
     position: absolute;
-    top: 0;
+    top: -3px;
     bottom: 0;
     margin: auto;
 }
