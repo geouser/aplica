@@ -2078,7 +2078,7 @@ footer p.copy {
 }
 .fb-page {
   width: 280px!important;height: 220px!important;
-  display: inline-block;
+  display: inline-block!important;
 }
 .fb_iframe_widget span {
   display: block!important;
