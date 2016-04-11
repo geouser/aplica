@@ -396,6 +396,14 @@ section.content {padding: 70px 0 240px;}
       background-repeat: no-repeat;
       background-position: 50% 50%;
     }
+    #promotionPage .offer h1:before {
+      width: 70px;
+      height: 86px;
+      background-image: url(../images/promotion_h1_mobile.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
     /*
     .offer    {padding-top: 40px; margin-bottom: 100px;}
     .offer h1 {position: absolute; left: 0; right: 0; top: 100px; margin: auto; color: #292929; font-size: 42px;}
