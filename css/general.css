@@ -324,6 +324,9 @@ section.content {padding: 70px 0 240px;}
   header.hasScrolled.style--velvet {
     background-color: rgba(62, 83, 182, 0.94);
   }
+  header.hasScrolled.style--blue {
+    background-color: rgba(0, 160, 220, 0.94);
+  }
   header.active {
     height: 74px;
   }  
@@ -942,7 +945,7 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
 }
 @media (max-width: 400px) {
    .steps_item {text-align: center; padding: 0 25px;}
-   .infoBlock  {padding-left: 72px;}
+   .infoBlock  {padding-left: 75px;}
    .infoBlock p {font-size: 15px; max-width: 99%;}
    .steps p {font: 15px/22px 'helveticaneuecyrlight';}
    .infoBlock h2  {max-width: 95%;}
@@ -2599,6 +2602,23 @@ section.error .cell {
   color: #2d8edf;
   font-family: 'helveticaneue'
 }
+.contact-form button {
+  height: 37px;
+  background-color: #43C896;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0 20px;
+  margin-top: -10px;
+  transition: all 0.3s ease;
+}
+.contact-form button:hover {
+  background-color: #50F0B3;
+}
+
+
+
+
 
 #map {
   height: 530px;
@@ -2662,4 +2682,82 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 }
 .false-file .contacts-attachment {
   margin-top: -4px;
+}
+
+
+
+@media (max-width: 1200px) {
+  #map {
+    height: 300px;
+  }
+  .contact-form .right-side {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .contact-form .left-side {
+    width: 270px;
+  }
+  .contact-form .right-side {
+    width: calc(100% - 270px);
+  }
+  .infoBlock br {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .contact-form .left-side {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .contact-form .right-side {
+    width: 80%;
+    padding-left: 0;
+    margin-right: 10%;
+    margin-top: 20px;
+  }
+  #contactsPage .offer h1 {
+    color: #fff;
+  }
+}
+
+@media (max-width: 600px) {
+  .contacts {
+    padding-bottom: 50px;
+  }
+  .contacts-lamp,
+  .contacts-marker,
+  .contacts-map:before {
+    width: 60px;
+    height: 60px;
+  }
+  .contact-form .label {
+    margin-bottom: 10px;
+  }
+  .contact-form .left-side,
+  .contact-form .right-side {
+    width: 100%;
+    margin: 0;
+  }
+  .contact-form textarea {
+    height: 150px;
+    background-color: #fff;
+  }
+  .contact-form {
+    padding-bottom: 90px;
+  }
+
+  .contact-form button {
+    float: none;
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    font-size: 20px;
+  }
+  #map {
+    height: 200px;
+  }
 }
