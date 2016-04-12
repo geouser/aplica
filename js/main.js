@@ -25,6 +25,107 @@ window.params = {
 */
 
 jQuery(document).ready(function($) {
+	/*Contacts page map*/
+	if ($('#map').length > 0) {
+		var map;
+		function googleMap_initialize() {
+		    var lat = $('#map').data('lat');
+		    var long = $('#map').data('long');
+		    var mapCenterCoord = new google.maps.LatLng(lat, long);
+		    var mapMarkerCoord = new google.maps.LatLng(lat, long);
+
+		    var mapOptions = {
+		      	center: mapCenterCoord,
+		      	zoom: 15,
+		      	//draggable: false,
+		      	disableDefaultUI: true,
+		      	scrollwheel: false,
+		      	mapTypeId: google.maps.MapTypeId.ROADMAP
+		    };
+
+		    map = new google.maps.Map(document.getElementById('map'), mapOptions);
+		    var markerImage = new google.maps.MarkerImage('images/location.svg');
+		    var marker = new google.maps.Marker({
+		      	icon: markerImage,
+		      	position: mapMarkerCoord, 
+		      	map: map,
+		      	title:"Aplica"
+		    });
+		    
+		    $(window).resize(function (){
+		      	map.setCenter(mapCenterCoord);
+		    });
+		  };
+		googleMap_initialize();	
+	}
+
+
+
+	/*Contacts page form*/
+	$(function(){
+		if ($('input[type=file]').val()) {
+			$('input[type=file]').siblings('span.fileName').html($('input[type=file]').val());
+		}
+		
+	    $('input[type=file]').on('change', function(event) {
+	      	var val = $(this).val()//.split('\\').pop();
+	      	$(this).siblings('span.fileName').html(val);
+	    });
+	})
+
+	validate = function($form){
+		var result = true;
+		inputs = $form.find('input, textarea');
+		for (var i = 0; i < inputs.length; i++) {
+			$(inputs[i]).parent().removeClass('error ok');
+			if ( !$(inputs[i]).val() ) {
+				$(inputs[i]).parent().addClass('error');
+				result = false;
+			} else {
+				$(inputs[i]).parent().addClass('ok');
+			}
+		}
+		return result;
+	}
+
+	$('.contact-form').find('input, textarea').each(function(index, el) {
+		$(el).parent().removeClass('error ok')
+		if ($(el).val() ) {
+			$(this).parent().addClass('ok');
+		}
+
+		$(el).on('change', function(event) {
+			if ($(this).val()) {
+				event.preventDefault();
+				$(this).parent().addClass('ok');
+			} else {
+				$(this).parent().addClass('error').removeClass('ok');
+			}
+			
+		});
+	});
+
+	$('.contact-form').on('submit', function(event) {
+		event.preventDefault();
+		if ( validate($(this)) ) {
+
+			/* here form submiting code */
+			var data = $(this).serialize()
+			alert(data);
+
+
+
+			$(this)[0].reset();
+			$(this).find('.field').removeClass('error ok');
+			$('input[type=file]').siblings('span.fileName').html('Прикрепить документ');
+		}
+	});
+
+
+
+
+
+
 
   $('.menu-button').on('click', function(event) {
     event.preventDefault();
@@ -115,6 +216,7 @@ jQuery(document).ready(function($) {
       slidesToShow: 10,
       slidesToScroll: 1,
       dots: true,
+      infinite: false,
       arrows:true,
       responsive: [
         {
