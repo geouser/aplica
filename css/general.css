@@ -628,9 +628,12 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
     header {
         padding: 15px 0;
     }
-    nav .button  {display: block; position: static; margin-bottom: 20px;}
+    nav .button {display: block;}
 }
 
+@media (max-height: 500px) {
+nav .button  {position: static; margin-bottom: 20px;}
+}
 
 
 /*--- offerSlider --- */
