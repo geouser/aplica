@@ -208,7 +208,7 @@ a:hover, a:active, a:focus {
 /* --------------------------------------
    Custom Styles
    -------------------------------------- */
-#indexPage      {color: #FFF;}
+#indexPage      {color: #FFF; background-position: 50% 0%; background-size: auto; background-color: #121212; background-repeat: no-repeat;}
 section.content {padding: 70px 0 240px;}
 
 .offer {
@@ -225,29 +225,20 @@ section.content {padding: 70px 0 240px;}
 
 
 /* ------- media for index page bg --------- */
+@media (min-width: 1800px) {
+#indexPage            {  background-size: 100% auto;}
+}
 @media (min-width: 1400px) {
-#indexPage .offer           {   background-image: url("../images/offer_bg.jpg");}
+#indexPage            {   background-image: url("../images/index_bg_1800.jpg");}
 }
 @media (min-width: 801px) and (max-width: 1400px) {
-#indexPage .offer           {   background-image: url("../images/offer_bg_1400.jpg");}
+#indexPage            {   background-image: url("../images/index_bg_1800.jpg");}
 }
 @media (max-width: 800px) {
-#indexPage                  {   background-color: #121212; background-image: url("../images/index_bg_mobile.jpg"); 
-                                background-position: 50% 0%; background-size: 100% auto; background-repeat: repeat;}
-#indexPage .offer:after {
-                                content: '';
-                                height: 300px;
-                                width: 100%;
-                                left: 0;
-                                right: 0;
-                                bottom: 0;
-                                position: absolute;
-                                background: -moz-linear-gradient(top, rgba(18,18,18,0) 0%,rgba(18,18,18,1) 100%);
-                                background: -webkit-linear-gradient(top, rgba(18,18,18,0) 0%,rgba(18,18,18,1) 100%);
-                                background: linear-gradient(to bottom, rgba(18,18,18,0) 0%,rgba(18,18,18,1) 100%);
-                                z-index: -1;
-                                }
+#indexPage                  {    background-image: url("../images/index_bg_mobile.jpg"); 
+                                 background-repeat: repeat; background-size: 100% auto;}
 }
+
 @media (max-width: 750px) {
 #indexPage                  {   background-position: 50% -5%;}
 }
@@ -637,9 +628,12 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
     header {
         padding: 15px 0;
     }
-    nav .button  {display: block; position: static; margin-bottom: 20px;}
+    nav .button {display: block;}
 }
 
+@media (max-height: 500px) {
+nav .button  {position: static; margin-bottom: 20px;}
+}
 
 
 /*--- offerSlider --- */
@@ -700,7 +694,7 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
     height: 20px;
     background-size: 100% 100%;
     position: absolute;
-    top: 370px;
+    top: 410px;
     z-index: 10;
 }
 .slick-arrow:before {display: none;}
@@ -734,6 +728,7 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
 @media (max-width: 800px) {
     .runSlider img {width: 110px;}
     .offerSlider {height: 750px; position: relative; z-index: 1;}
+    .offerSlider_slide  {margin-top: 100px;}
     .offerSlider_wrap {background-image: url("../images/offer_slider_bg.jpg"); background-position: 50% 50%; -webkit-background-size: cover;
          -o-background-size: cover;
             background-size: cover;} 
@@ -755,17 +750,21 @@ nav .button {display: none; position: absolute; bottom: 2px; left: 0; right: 0; 
 
 @media (max-width: 600px) and (max-height: 650px){
     .offerSlider {height: 650px;}
-    .slick-arrow {top: 280px} 
+    .offerSlider_slide  {margin-top: 60px;}
+    .slick-arrow {top: 265px} 
 }
 @media (max-width: 600px) and (max-height: 500px){
     .offerSlider {height: 500px;} 
-    .slick-arrow {top: 200px}
+    .offerSlider_slide  {margin-top: 60px;}
+    .slick-arrow {top: 210px}
 }
 @media (max-width: 600px) {
     .runSlider img {width: 80px;}
     .runSlider span {font-size: 20px;}
     .runSlider {margin-top: 30px;}
     .offerSlider:after { height: 100px;}
+    .slick-prev {left: -4px;}
+    .slick-next {right: -4px;}
 }
 
 
@@ -2006,16 +2005,8 @@ text-align: left;
    Reviews
    -------------------------------------- */
 .reviews {
-  background-color: #121212;
 }
-@media (min-width: 801px) {
-  .reviews {
-    background-image: url(../images/blue_shadow-min.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 0%;
-  }
-}
+
 .reviews .wrapper {
   padding: 100px 0 110px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);

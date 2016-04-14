@@ -187,7 +187,6 @@ jQuery(document).ready(function($) {
 
   $('.offerSlider').on('afterChange', function(event, slick, currentSlide, nextSlide){
     var slideIn = $(slick.$slides.get(currentSlide)).attr('data-slick-index');
-    console.log(slideIn);
     if (slideIn == 0) {
       $('.offerSlider').slick('slickPause');
     }
